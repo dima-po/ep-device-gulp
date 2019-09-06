@@ -1,2 +1,45 @@
-.class
-    img(src="" alt="")
+header.header
+    .header__logo
+        | Device
+    
+    ul.header__menu-secondary.menu-secondary
+        li.menu-secondary__search
+            form(action="" method="")
+                input.menu-secondary__field(type="text" name="search" placeholder="Поиск по сайту")
+                input.menu-secondary__submit(type="submit" value="Найти")
+        
+        li.menu-secondary__user.user
+            button.user__login-btn(type="button")
+                | Войти
+
+            p.user__about Валентин Петухов
+
+            button.user__logout-btn(type="button")
+                | Выйти
+
+        li.menu-secondary__compare
+            a(href="#") Сравнить
+
+        li.menu-secondary__cart
+            a(href="#") Корзина
+        
+
+    ul.header__menu-main.main-menu
+        li.main-menu__catalogue
+            button(type="button") Каталог товаров
+
+            ul.main-menu__submenu.submenu
+                - var submenuItems = ['Виртуальная реальность', 'Фитнес-браслеты', 'Квадрокоптеры', 'Моноподы для селфи', 'Умные часы', 'Экшн-камеры'];
+
+                each item, index in submenuItems
+                    li.submenu__item
+                        a(href="#")= item
+
+        li.main-menu__delivery
+            a(href="#") Доставка
+            
+        li.main-menu__guaranty
+            a(href="#") Доставка
+
+        li.main-menu__contacts
+            a(href="#") Контакты
