@@ -13,10 +13,15 @@ main
             li
                 button(type="button") По популярности
 
+        div
+            button(type="bytton") Стрелка вверх
+            button(type="bytton") Стрелка вниз
+
     section
         form(action="" method="GET")
             div
                 h4 Стоимость
+                input(type="range")
 
             div
                 h4 Цвет
@@ -55,7 +60,7 @@ main
         each product, index in productItems
             article
                 picture
-                    img(scr="https://dummyimage.com/360x380?text=Товар")
+                    img(src="https://dummyimage.com/360x380?text=Product")
                 h3= productItems[index]
                 p= productPrice[index]
                 div

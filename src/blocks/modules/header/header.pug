@@ -1,47 +1,44 @@
-section.header-section
-    .container
-        header.header
-            .header__logo
-                | Device
+section
+        // Тут будет класс .container
+        header
+            div
+                // Заголовок будет скрыт
+                h1 Device
+                img(src="https://dummyimage.com/163x35" alt="Device Logo" width="163" height="35")
             
-            ul.header__secondary-menu.secondary-menu
-                li.secondary-menu__search
+            ul
+                li
                     form(action="" method="")
-                        input.secondary-menu__field(type="text" name="search" placeholder="Поиск по сайту")
-                        input.secondary-menu__submit(type="submit" value="Найти")
+                        input(type="text" name="search" placeholder="Поиск по сайту")
+                        input(type="submit" value="Найти")
                 
-                li.secondary-menu__user.header-user
-                    button.header-user__login-btn(type="button")
-                        | Войти
+                li
+                    button(type="button") Войти
+                    div Валентин Петухов
+                    button(type="button") Выйти
 
-                    .header-user__name Валентин Петухов
-
-                    button.header-user__logout-btn(type="button")
-                        | Выйти
-
-                li.secondary-menu__compare
+                li
                     a(href="#") Сравнить
 
-                li.secondary-menu__cart
+                li
                     a(href="#") Корзина
                 
 
-            ul.header__main-menu.main-menu
-                li.main-menu__item.main-menu__item--catalogue
+            ul
+                li
                     button(type="button") Каталог товаров
-
-                    ul.main-menu__submenu.header-submenu
+                    ul
                         - var submenuItems = ['Виртуальная реальность', 'Фитнес-браслеты', 'Квадрокоптеры', 'Моноподы для селфи', 'Умные часы', 'Экшн-камеры'];
 
                         each item, index in submenuItems
-                            li.header-submenu__item
+                            li
                                 a(href="#")= item
 
-                li.main-menu__item
+                li
                     a(href="#") Доставка
                     
-                li.main-menu__item
+                li
                     a(href="#") Гарантия
 
-                li.main-menu__item
+                li
                     a(href="#") Контакты
