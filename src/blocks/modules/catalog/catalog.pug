@@ -1,0 +1,78 @@
+main
+    section
+        h3 Фильтр:
+    
+    // Возможно в этой секции button нужно будет переделать в input
+    section
+        h3 Сортировка:
+        ul
+            li
+                button(type="button") По цене
+            li
+                button(type="button") По типу
+            li
+                button(type="button") По популярности
+
+    section
+        form(action="" method="GET")
+            div
+                h4 Стоимость
+
+            div
+                h4 Цвет
+                div
+                    input(type="checkbox" name="product-color" id="black" value="black") 
+                    label(for="black") Черный
+                div
+                    input(type="checkbox" name="product-color" id="white" value="white") 
+                    label(for="white") Белый
+                div
+                    input(type="checkbox" name="product-color" id="blue" value="blue") 
+                    label(for="blue") Синий
+                div
+                    input(type="checkbox" name="product-color" id="red" value="red") 
+                    label(for="red") Красный
+                div
+                    input(type="checkbox" name="product-color" id="pink" value="pink") 
+                    label(for="pink") Розовый
+
+            div
+                h4 Bluetooth
+                div
+                    input(type="radio" name="bluetooth" id="yes" value="yes")
+                    label(for="yes") Есть
+                div
+                    input(type="radio" name="bluetooth" id="no" value="no")
+                    label(for="no") Нет
+
+            div
+                input(type="submit" value="Показать")
+
+    - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
+    - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
+    
+    section
+        each product, index in productItems
+            article
+                picture
+                    img(scr="https://dummyimage.com/360x380?text=Товар")
+                h3= productItems[index]
+                p= productPrice[index]
+                div
+                    button(type="button") В корзину
+                    button(type="button") Добавить к сравнению
+
+        section
+            div
+                a(href="#") Назад
+            ul
+                li
+                    a(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3
+                
+            div
+                a(href="#") Вперед
+

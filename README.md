@@ -175,11 +175,11 @@ entry: {
 
 **SCSS**
 ```scss
-.items{
+.items {
     @include row-flex();
     @include md(justify-content, center);
  
-    .item{
+    .item {
         @include col();
         @include size(3);
         @include size-md(5);
