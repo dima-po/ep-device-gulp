@@ -1,45 +1,47 @@
-header.header
-    .header__logo
-        | Device
-    
-    ul.header__menu-secondary.menu-secondary
-        li.menu-secondary__search
-            form(action="" method="")
-                input.menu-secondary__field(type="text" name="search" placeholder="Поиск по сайту")
-                input.menu-secondary__submit(type="submit" value="Найти")
-        
-        li.menu-secondary__user.user
-            button.user__login-btn(type="button")
-                | Войти
-
-            p.user__about Валентин Петухов
-
-            button.user__logout-btn(type="button")
-                | Выйти
-
-        li.menu-secondary__compare
-            a(href="#") Сравнить
-
-        li.menu-secondary__cart
-            a(href="#") Корзина
-        
-
-    ul.header__menu-main.main-menu
-        li.main-menu__catalogue
-            button(type="button") Каталог товаров
-
-            ul.main-menu__submenu.submenu
-                - var submenuItems = ['Виртуальная реальность', 'Фитнес-браслеты', 'Квадрокоптеры', 'Моноподы для селфи', 'Умные часы', 'Экшн-камеры'];
-
-                each item, index in submenuItems
-                    li.submenu__item
-                        a(href="#")= item
-
-        li.main-menu__delivery
-            a(href="#") Доставка
+section.header-section
+    .container
+        header.header
+            .header__logo
+                | Device
             
-        li.main-menu__guaranty
-            a(href="#") Доставка
+            ul.header__secondary-menu.secondary-menu
+                li.secondary-menu__search
+                    form(action="" method="")
+                        input.secondary-menu__field(type="text" name="search" placeholder="Поиск по сайту")
+                        input.secondary-menu__submit(type="submit" value="Найти")
+                
+                li.secondary-menu__user.header-user
+                    button.header-user__login-btn(type="button")
+                        | Войти
 
-        li.main-menu__contacts
-            a(href="#") Контакты
+                    .header-user__name Валентин Петухов
+
+                    button.header-user__logout-btn(type="button")
+                        | Выйти
+
+                li.secondary-menu__compare
+                    a(href="#") Сравнить
+
+                li.secondary-menu__cart
+                    a(href="#") Корзина
+                
+
+            ul.header__main-menu.main-menu
+                li.main-menu__item.main-menu__item--catalogue
+                    button(type="button") Каталог товаров
+
+                    ul.main-menu__submenu.header-submenu
+                        - var submenuItems = ['Виртуальная реальность', 'Фитнес-браслеты', 'Квадрокоптеры', 'Моноподы для селфи', 'Умные часы', 'Экшн-камеры'];
+
+                        each item, index in submenuItems
+                            li.header-submenu__item
+                                a(href="#")= item
+
+                li.main-menu__item
+                    a(href="#") Доставка
+                    
+                li.main-menu__item
+                    a(href="#") Гарантия
+
+                li.main-menu__item
+                    a(href="#") Контакты
