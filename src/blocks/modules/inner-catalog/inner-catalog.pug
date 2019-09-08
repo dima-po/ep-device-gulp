@@ -14,8 +14,8 @@ main
                 button(type="button") По популярности
 
         div
-            button(type="bytton") Стрелка вверх
-            button(type="bytton") Стрелка вниз
+            button(type="button") Стрелка вверх
+            button(type="button") Стрелка вниз
 
     section
         form(action="" method="GET")
@@ -60,7 +60,7 @@ main
         each product, index in productItems
             article
                 picture
-                    img(src="https://dummyimage.com/360x380?text=Product")
+                    img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
                 h3= productItems[index]
                 p= productPrice[index]
                 div
