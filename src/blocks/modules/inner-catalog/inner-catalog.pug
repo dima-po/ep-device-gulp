@@ -1,83 +1,89 @@
-main
-    section
-        h3 Фильтр:
-    
-    // Возможно в этой секции button нужно будет переделать в input
-    section
-        h3 Сортировка:
-        ul
-            li
-                button(type="button") По цене
-            li
-                button(type="button") По типу
-            li
-                button(type="button") По популярности
-
-        div
-            button(type="button") Стрелка вверх
-            button(type="button") Стрелка вниз
-
-    section
-        form(action="" method="GET")
-            div
-                h4 Стоимость
-                input(type="range")
-
-            div
-                h4 Цвет
-                div
-                    input(type="checkbox" name="product-color" id="black" value="black") 
-                    label(for="black") Черный
-                div
-                    input(type="checkbox" name="product-color" id="white" value="white") 
-                    label(for="white") Белый
-                div
-                    input(type="checkbox" name="product-color" id="blue" value="blue") 
-                    label(for="blue") Синий
-                div
-                    input(type="checkbox" name="product-color" id="red" value="red") 
-                    label(for="red") Красный
-                div
-                    input(type="checkbox" name="product-color" id="pink" value="pink") 
-                    label(for="pink") Розовый
-
-            div
-                h4 Bluetooth
-                div
-                    input(type="radio" name="bluetooth" id="yes" value="yes")
-                    label(for="yes") Есть
-                div
-                    input(type="radio" name="bluetooth" id="no" value="no")
-                    label(for="no") Нет
-
-            div
-                input(type="submit" value="Показать")
-
-    - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
-    - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
-    
-    section
-        each product, index in productItems
-            article
-                picture
-                    img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
-                h3= productItems[index]
-                p= productPrice[index]
-                div
-                    button(type="button") В корзину
-                    button(type="button") Добавить к сравнению
-
-        section
-            div
-                a(href="#") Назад
-            ul
+main.catalog-content
+    .container
+        section.catalog-content__filter-title
+            h3 Фильтр:
+        
+        // Возможно в этой секции button нужно будет переделать в input
+        section.catalog-content__sort.catalog-sort
+            h3 Сортировка:
+            ul.catalog-sort__nav
                 li
-                    a(href="#") 1
+                    button(type="button") По цене
                 li
-                    a(href="#") 2
+                    button(type="button") По типу
                 li
-                    a(href="#") 3
-                
-            div
-                a(href="#") Вперед
+                    button(type="button") По популярности
+
+            div.catalog-sort__arrows
+                button.catalog-sort__arrow-up(type="button")
+                    svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
+                        path(fill='#231F20', d='M5.5 0L0 10h11z')
+
+                button.catalog-sort__arrow-down(type="button")
+                    svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
+                        path(fill='#231F20', d='M5.5 10L0 0h11')
+
+        section.catalog-content__filter.catalog-filter
+            form(action="" method="GET")
+                div.catalog-filter__item.catalog-filter__item--price
+                    h4 Стоимость
+                    input(type="range")
+
+                div.catalog-filter__item.catalog-filter__item--color
+                    h4 Цвет
+                    div
+                        input(type="checkbox" name="product-color" id="black" value="black") 
+                        label(for="black") Черный
+                    div
+                        input(type="checkbox" name="product-color" id="white" value="white") 
+                        label(for="white") Белый
+                    div
+                        input(type="checkbox" name="product-color" id="blue" value="blue") 
+                        label(for="blue") Синий
+                    div
+                        input(type="checkbox" name="product-color" id="red" value="red") 
+                        label(for="red") Красный
+                    div
+                        input(type="checkbox" name="product-color" id="pink" value="pink") 
+                        label(for="pink") Розовый
+
+                div.catalog-filter__item.catalog-filter__item--bluetooth
+                    h4 Bluetooth
+                    div
+                        input(type="radio" name="bluetooth" id="yes" value="yes")
+                        label(for="yes") Есть
+                    div
+                        input(type="radio" name="bluetooth" id="no" value="no")
+                        label(for="no") Нет
+
+                div.catalog-filter__item.catalog-filter__item--btn.device-btn
+                    input(type="submit" value="Показать")
+
+        - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
+        - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
+        
+        section.catalog-content__products.catalog-products
+            each product, index in productItems
+                article.catalog-products__item
+                    picture
+                        img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
+                    h3.catalog-products__name= productItems[index]
+                    span.catalog-products__price= productPrice[index]
+                    div.catalog-products__overlay
+                        button.catalog-products__cart-btn.device-btn(type="button") В корзину
+                        button.catalog-products__compare-btn(type="button") Добавить к сравнению
+
+            section.catalog-content__pagination.pagination
+                div.pagination__back
+                    a(href="#") Назад
+                ul.pagination__numbers
+                    li
+                        a(href="#") 1
+                    li
+                        a(href="#") 2
+                    li
+                        a(href="#") 3
+                    
+                div.pagination__next
+                    a(href="#") Вперед
 
