@@ -1,0 +1,11 @@
+.slider {
+    counter-reset: slider-number;
+
+    &__counter {
+        &::before {
+            counter-increment: slider-number;
+            content: "0" counter(slider-number);
+        }
+    }
+}
+
