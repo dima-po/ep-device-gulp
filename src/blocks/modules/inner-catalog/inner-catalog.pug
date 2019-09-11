@@ -1,89 +1,90 @@
-main.catalog-content
-    .container
-        section.catalog-content__filter-title
-            h3 Фильтр:
+main.catalog
+    div.container
+        aside.catalog__sidebar
+            div.catalog__filter
+                div.catalog__filter-title
+                    h3 Фильтр:
+                div.catalog__filter-form
+                    form(action="" method="GET")
+                        div.catalog__filter-item
+                            h4.catalog__filter-item-title Стоимость
+                            input(type="range")
+
+                        div.catalog__filter-item
+                            h4.catalog__filter-item-title Цвет
+                            div.catalog__filter-item-group
+                                input(type="checkbox" name="product-color" id="black" value="black") 
+                                label(for="black") Черный
+                            div.catalog__filter-item-group
+                                input(type="checkbox" name="product-color" id="white" value="white") 
+                                label(for="white") Белый
+                            div.catalog__filter-item-group
+                                input(type="checkbox" name="product-color" id="blue" value="blue") 
+                                label(for="blue") Синий
+                            div.catalog__filter-item-group
+                                input(type="checkbox" name="product-color" id="red" value="red") 
+                                label(for="red") Красный
+                            div.catalog__filter-item-group
+                                input(type="checkbox" name="product-color" id="pink" value="pink") 
+                                label(for="pink") Розовый
+
+                        div.catalog__filter-item
+                            h4.catalog__filter-item-title Bluetooth
+                            div.catalog__filter-item-group
+                                input(type="radio" name="bluetooth" id="yes" value="yes")
+                                label(for="yes") Есть
+                            div.catalog__filter-item-group
+                                input(type="radio" name="bluetooth" id="no" value="no")
+                                label(for="no") Нет
+
+                        div.catalog__filter-item.device-btn
+                            input(type="submit" value="Показать")
         
-        // Возможно в этой секции button нужно будет переделать в input
-        section.catalog-content__sort.catalog-sort
-            h3 Сортировка:
-            ul.catalog-sort__nav
-                li
-                    button(type="button") По цене
-                li
-                    button(type="button") По типу
-                li
-                    button(type="button") По популярности
+        div.catalog__content
+            div.catalog__sort
+                h3 Сортировка:
+                ul.catalog__sort-nav
+                    li.catalog__sort-nav-item.catalog__sort-nav-item--price
+                        button(type="button") По цене
+                    li.catalog__sort-nav-item.catalog__sort-nav-item--type
+                        button(type="button") По типу
+                    li.catalog__sort-nav-item.catalog__sort-nav-item--popular
+                        button(type="button") По популярности
 
-            div.catalog-sort__arrows
-                button.catalog-sort__arrow-up(type="button")
-                    svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
-                        path(fill='#231F20', d='M5.5 0L0 10h11z')
+                .catalog__sort-arrow
+                    button.catalog__sort-arrow-up(type="button")
+                        svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
+                            path(d='M5.5 0L0 10h11z')
 
-                button.catalog-sort__arrow-down(type="button")
-                    svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
-                        path(fill='#231F20', d='M5.5 10L0 0h11')
+                    button.catalog__sort-arrow-down(type="button")
+                        svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
+                            path(d='M5.5 10L0 0h11')
 
-        section.catalog-content__filter.catalog-filter
-            form(action="" method="GET")
-                div.catalog-filter__item.catalog-filter__item--price
-                    h4 Стоимость
-                    input(type="range")
+            - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
+            - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
+            
+            div.catalog__products
+                each product, index in productItems
+                    article.catalog__products-item
+                        picture.catalog__products-image
+                            img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
+                        h3.catalog__products-name= productItems[index]
+                        span.catalog__products-price= productPrice[index]
+                        div.catalog__products-overlay
+                            button.catalog__products-overlay-cart-btn.device-btn(type="button") В корзину
+                            button.catalog__products-overlay-compare-btn(type="button") Добавить к сравнению
 
-                div.catalog-filter__item.catalog-filter__item--color
-                    h4 Цвет
-                    div
-                        input(type="checkbox" name="product-color" id="black" value="black") 
-                        label(for="black") Черный
-                    div
-                        input(type="checkbox" name="product-color" id="white" value="white") 
-                        label(for="white") Белый
-                    div
-                        input(type="checkbox" name="product-color" id="blue" value="blue") 
-                        label(for="blue") Синий
-                    div
-                        input(type="checkbox" name="product-color" id="red" value="red") 
-                        label(for="red") Красный
-                    div
-                        input(type="checkbox" name="product-color" id="pink" value="pink") 
-                        label(for="pink") Розовый
-
-                div.catalog-filter__item.catalog-filter__item--bluetooth
-                    h4 Bluetooth
-                    div
-                        input(type="radio" name="bluetooth" id="yes" value="yes")
-                        label(for="yes") Есть
-                    div
-                        input(type="radio" name="bluetooth" id="no" value="no")
-                        label(for="no") Нет
-
-                div.catalog-filter__item.catalog-filter__item--btn.device-btn
-                    input(type="submit" value="Показать")
-
-        - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
-        - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
-        
-        section.catalog-content__products.catalog-products
-            each product, index in productItems
-                article.catalog-products__item
-                    picture
-                        img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
-                    h3.catalog-products__name= productItems[index]
-                    span.catalog-products__price= productPrice[index]
-                    div.catalog-products__overlay
-                        button.catalog-products__cart-btn.device-btn(type="button") В корзину
-                        button.catalog-products__compare-btn(type="button") Добавить к сравнению
-
-            section.catalog-content__pagination.pagination
-                div.pagination__back
-                    a(href="#") Назад
-                ul.pagination__numbers
-                    li
-                        a(href="#") 1
-                    li
-                        a(href="#") 2
-                    li
-                        a(href="#") 3
-                    
-                div.pagination__next
-                    a(href="#") Вперед
+                div.catalog__products-pagination
+                    div.catalog__products-pagination-back
+                        a(href="#") Назад
+                    ul.catalog__products-pagination-numbers
+                        li
+                            a(href="#") 1
+                        li
+                            a(href="#") 2
+                        li
+                            a(href="#") 3
+                        
+                    div.catalog__products-pagination-next
+                        a(href="#") Вперед
 
