@@ -67,7 +67,7 @@ main.catalog
                 each product, index in productItems
                     article.catalog__products-item
                         picture.catalog__products-image
-                            img(src="https://dummyimage.com/360x380?text=Product" alt="Изображение товара")
+                            img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
                         h3.catalog__products-name= productItems[index]
                         span.catalog__products-price= productPrice[index]
                         div.catalog__products-overlay
