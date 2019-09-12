@@ -6,12 +6,13 @@ main.catalog
                     h3 Фильтр:
                 div.catalog__filter-form
                     form(action="" method="GET")
-                        div.catalog__filter-item
-                            h4.catalog__filter-item-title Стоимость
-                            input(type="range")
-
-                        div.catalog__filter-item
-                            h4.catalog__filter-item-title Цвет
+                        fieldset.catalog__filter-item
+                            legeng.catalog__filter-item-title Стоимость
+                            div.catalog__filter-item
+                                input(type="text" value="0")
+                                input(type="text" value="3000")
+                        fieldset.catalog__filter-item
+                            legend.catalog__filter-item-title Цвет
                             div.catalog__filter-item-group
                                 input(type="checkbox" name="product-color" id="black" value="black") 
                                 label(for="black") Черный
@@ -28,8 +29,8 @@ main.catalog
                                 input(type="checkbox" name="product-color" id="pink" value="pink") 
                                 label(for="pink") Розовый
 
-                        div.catalog__filter-item
-                            h4.catalog__filter-item-title Bluetooth
+                        fieldset.catalog__filter-item
+                            legend.catalog__filter-item-title Bluetooth
                             div.catalog__filter-item-group
                                 input(type="radio" name="bluetooth" id="yes" value="yes")
                                 label(for="yes") Есть
