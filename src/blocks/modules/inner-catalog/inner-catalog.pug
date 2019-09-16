@@ -1,6 +1,6 @@
 main.catalog
     div.container
-        aside.catalog__sidebar
+        section.catalog__sidebar
             div.catalog__filter
                 div.catalog__filter-title
                     h3 Фильтр:
@@ -13,35 +13,37 @@ main.catalog
                                 input(type="text" value="3000")
                         fieldset.catalog__filter-item
                             legend.catalog__filter-item-title Цвет
-                            div.catalog__filter-item-group
-                                input(type="checkbox" name="product-color" id="black" value="black") 
-                                label(for="black") Черный
-                            div.catalog__filter-item-group
-                                input(type="checkbox" name="product-color" id="white" value="white") 
-                                label(for="white") Белый
-                            div.catalog__filter-item-group
-                                input(type="checkbox" name="product-color" id="blue" value="blue") 
-                                label(for="blue") Синий
-                            div.catalog__filter-item-group
-                                input(type="checkbox" name="product-color" id="red" value="red") 
-                                label(for="red") Красный
-                            div.catalog__filter-item-group
-                                input(type="checkbox" name="product-color" id="pink" value="pink") 
-                                label(for="pink") Розовый
+                            ul
+                                li.catalog__filter-item-group
+                                    input(type="checkbox" name="product-color" id="black" value="black") 
+                                    label(for="black") Черный
+                                li.catalog__filter-item-group
+                                    input(type="checkbox" name="product-color" id="white" value="white") 
+                                    label(for="white") Белый
+                                li.catalog__filter-item-group
+                                    input(type="checkbox" name="product-color" id="blue" value="blue") 
+                                    label(for="blue") Синий
+                                li.catalog__filter-item-group
+                                    input(type="checkbox" name="product-color" id="red" value="red") 
+                                    label(for="red") Красный
+                                li.catalog__filter-item-group
+                                    input(type="checkbox" name="product-color" id="pink" value="pink") 
+                                    label(for="pink") Розовый
 
                         fieldset.catalog__filter-item
                             legend.catalog__filter-item-title Bluetooth
-                            div.catalog__filter-item-group
-                                input(type="radio" name="bluetooth" id="yes" value="yes")
-                                label(for="yes") Есть
-                            div.catalog__filter-item-group
-                                input(type="radio" name="bluetooth" id="no" value="no")
-                                label(for="no") Нет
+                            ul
+                                li.catalog__filter-item-group
+                                    input(type="radio" name="bluetooth" id="yes" value="yes")
+                                    label(for="yes") Есть
+                                li.catalog__filter-item-group
+                                    input(type="radio" name="bluetooth" id="no" value="no")
+                                    label(for="no") Нет
 
                         div.catalog__filter-item.device-btn
                             input(type="submit" value="Показать")
         
-        div.catalog__content
+        section.catalog__content
             div.catalog__sort
                 h3 Сортировка:
                 ul.catalog__sort-nav
@@ -67,17 +69,17 @@ main.catalog
             div.catalog__products
                 each product, index in productItems
                     article.catalog__products-item
-                        picture.catalog__products-image
-                            img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
-                        h3.catalog__products-name= productItems[index]
-                        span.catalog__products-price= productPrice[index]
-                        div.catalog__products-overlay
-                            button.catalog__products-overlay-cart-btn.device-btn(type="button") В корзину
-                            button.catalog__products-overlay-compare-btn(type="button") Добавить к сравнению
+                        a.catalog__products-item-link(href="")
+                            picture.catalog__products-image
+                                img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                            h3.catalog__products-name= productItems[index]
+                            span.catalog__products-price= productPrice[index]
+                            div.catalog__products-overlay
+                                button.catalog__products-overlay-cart-btn.device-btn(type="button") В корзину
+                                button.catalog__products-overlay-compare-btn(type="button") Добавить к сравнению
 
                 div.catalog__products-pagination
-                    div.catalog__products-pagination-back
-                        a(href="#") Назад
+                    a.catalog__products-pagination-back(href="#") Назад
                     ul.catalog__products-pagination-numbers
                         li
                             a(href="#") 1
@@ -85,7 +87,6 @@ main.catalog
                             a(href="#") 2
                         li
                             a(href="#") 3
+                    a.catalog__products-pagination-next(href="#") Вперед
                         
-                    div.catalog__products-pagination-next
-                        a(href="#") Вперед
 
