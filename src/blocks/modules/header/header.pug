@@ -13,12 +13,16 @@ header.header
                         button.header__secondary-menu-search-btn(type="submit") Найти
                 
                 li.header__secondary-menu-user
-                    svg(xmlns='http://www.w3.org/2000/svg', width='13', height='12', viewBox='0 0 13 12')
-                        path(fill='#272525', d='M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z')
-                    button.header__secondary-menu-user-login-btn(type="button") Войти
+                    span.header__secondary-menu-user-login
+                        a(href="#")
+                            svg(xmlns='http://www.w3.org/2000/svg', width='13', height='12', viewBox='0 0 13 12')
+                                path(fill='#272525', d='M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z')
+                            span Войти 
                     span.header__secondary-menu-user-info
-                        span.header__secondary-menu-user-name Валентин Петухов
-                        button.header__secondary-menu-user-logout-btn(type="button") Выйти
+                        svg(xmlns='http://www.w3.org/2000/svg', width='13', height='12', viewBox='0 0 13 12')
+                            path(fill='#272525', d='M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z')
+                        span.header__secondary-menu-user-info-name Валентин Петухов
+                        button.header__secondary-menu-user-info-logout(type="button") Выйти
 
                 li.header__secondary-menu-compare
                     a(href="#")
@@ -35,22 +39,22 @@ header.header
                         
             ul.header__main-menu
                 li.header__main-menu-item
-                    a(href="catalog.html") Каталог товаров
-                    ul.header__main-menu-submenu
+                    a.header__main-menu-item--dropdown(href="catalog.html") Каталог товаров
+                    ul.header__main-menu-submenu(aria-label="Выпадающее меню каталога")
                         li.header__main-menu-submenu-block
                             ul
                                 li.header__main-menu-submenu-item
                                     a(href="#") Виртуальная реальность
-                                li.submenu__item
+                                li.header__main-menu-submenu-item
                                     a(href="#") Моноподы для селфи
-                                li.submenu__item
+                                li.header__main-menu-submenu-item
                                     a(href="#") Экшн-камеры
 
                         li.header__main-menu-submenu-block
                             ul
                                 li.header__main-menu-submenu-item
                                     a(href="#") Фитнес-браслеты
-                                li.submenu__item
+                                li.header__main-menu-submenu-item
                                     a(href="#") Умные часыы
 
                         li.header__main-menu-submenu-block
