@@ -3,10 +3,10 @@ section.slider
         div.slider__wrap
             div.slider__item
                 picture.slider__image
-                    img(src="img/slider-image-1.jpg" alt="Изображение товара")
+                    img(src="img/slider-image-1.png" alt="Изображение товара")
                 div.slider__info
                     h2.slider__info-title Делай селфи, как Бен Стиллер!
-                    p Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                    p.slider__info-description Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                     div.slider__more-btn
                         a.device-btn(href="#") Подробнее
                     ul.slider__product-info
@@ -18,12 +18,12 @@ section.slider
                             span Материал
                 div.slider__counter
 
-            div.slider__item
+            div.slider__item.visually-hidden
                 picture.slider__image
-                    img(src="img/slider-image-2.jpg" alt="Изображение товара")
+                    img(src="img/slider-image-2.png" alt="Изображение товара")
                 div.slider__info
                     h2.slider__info-title Худеем правильно!
-                    p Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                    p.slider__info-description Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                     div.slider__more-btn
                         a.device-btn(href="#") Подробнее
                     ul.slider__product-info
@@ -31,12 +31,12 @@ section.slider
                             span Без подзарядки
                 .slider__counter
 
-            div.slider__item
+            div.slider__item.visually-hidden
                 picture.slider__image
-                    img(src="img/slider-image-3.jpg" alt="Изображение товара")
+                    img(src="img/slider-image-3.png" alt="Изображение товара")
                 div.slider__info
                     h2.slider__info-title Порхает как бабочка, жалит как пчела!
-                    p Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                    p.slider__info-description Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                     div.slider__more-btn
                         a.device-btn(href="#") Подробнее
                     ul.slider__product-info
@@ -46,13 +46,13 @@ section.slider
                             span Радиус поражения
                 .slider__counter
 
-        ul.slider__bullets
-            li
-                button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
-            li
-                button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
-            li
-                button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
+            ul.slider__bullets
+                li
+                    button.slider__bullets-btn.slider__bullets-btn--active(type="button" aria-label="Переключение слайдера") 
+                li
+                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
+                li
+                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
 
 
                 

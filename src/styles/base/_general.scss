@@ -15,6 +15,11 @@ body {
     font-size: $base-font-size;
 }
 
+// img {
+//     width: 100%;
+//     height: auto;
+// }
+
 .container {
     // @include container();
     // @include sm(max-width, rem(510));
@@ -33,4 +38,44 @@ body {
     clip: rect(1px, 1px, 1px, 1px);
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     white-space: nowrap; /* added line */
+}
+
+.device-btn {
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    position: relative;
+    border: 0;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $dark-color;
+    font-family: $headers-font;
+    font-size: 18px;
+    letter-spacing: 3px;
+    z-index: 1;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background-color: $main-color;
+        height: 8px;
+        z-index: -1;
+        transform: translateY(-50%);
+        transition: height 0.2s;
+        will-change: height;
+    }
+
+    &:hover::after {
+        height: 100%;
+    }
+
+    &:active {
+        color: rgba($dark-color, 0.3);
+    }
 }
