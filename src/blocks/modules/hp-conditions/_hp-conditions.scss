@@ -6,12 +6,12 @@
     $this: ".conditions";
 
     &__wrap {
-        position: relative;
-        top: -100px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        top: -100px;
     }
 
     &__tabs {
@@ -54,13 +54,14 @@
 
     &__tabs-switch-btn {
         position: relative;
+        z-index: 1;
         min-width: 160px;
+        border: 0;
         padding: 0;
         padding-top: 8px;
         padding-bottom: 8px;
         padding-left: 15px;
         padding-right: 15px;
-        border: 0;
         font-family: $headers-font;
         font-size: 18px;
         line-height: 24px;
@@ -68,17 +69,16 @@
         text-transform: uppercase;
         background-color: transparent;
         cursor: pointer;
-        z-index: 1;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
+            z-index: -1;
             top: 50%;
-            left: 0;
             right: 0;
+            left: 0;
             background-color: $main-color;
             height: 8px;
-            z-index: -1;
             transform: translateY(-50%);
             transition: height 0.2s;
             will-change: height;

@@ -2,9 +2,7 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -46,6 +44,7 @@ body {
     padding-top: 11px;
     padding-bottom: 11px;
     position: relative;
+    z-index: 1;
     border: 0;
     background-color: transparent;
     text-decoration: none;
@@ -54,18 +53,17 @@ body {
     font-family: $headers-font;
     font-size: 18px;
     letter-spacing: 3px;
-    z-index: 1;
     cursor: pointer;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
+        z-index: -1;
         top: 50%;
-        left: 0;
         right: 0;
+        left: 0;
         background-color: $main-color;
         height: 8px;
-        z-index: -1;
         transform: translateY(-50%);
         transition: height 0.2s;
         will-change: height;
