@@ -1,6 +1,21 @@
 .footer {
     margin-top: 100px;
+    padding: 65px 140px;
     background-color: $text-color;
+
+    & a {
+        color: $light-color;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    
+        &:active {
+            opacity: 0.3;
+        }
+    }
 
     &__top {
         display: flex;
@@ -9,11 +24,41 @@
         justify-content: space-between;
     }
 
+    &__logo,
+    &__academy-logo {
+
+        svg {
+            fill: $main-color;
+            transition: 0.2s;
+        }
+
+        &:hover svg {
+            opacity: 0.6;
+        }
+
+        &:active svg {
+            opacity: 0.3;
+        }
+    }
+
     &__middle {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &__main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__main-menu-item {
+        font-family: $headers-font;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
     }
 
     &__bottom {
@@ -49,5 +94,28 @@
         flex-direction: row;
         align-items: center;
         list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__socials-item {
+
+        &:not(:last-child) {
+            margin-right: 23px;
+        }
+
+        svg {
+            fill: $light-color;
+            opacity: 0.3;
+            transition: 0.2s;
+        }
+
+        &:hover svg {
+            opacity: 0.6;
+        }
+
+        &:active svg {
+            opacity: 0.1;
+        }
     }
 }

@@ -1,15 +1,16 @@
-div.contact-popup
+div.contact-popup-overlay.hidden
+div.contact-popup.hidden
     .contact-popup__wrap
         form(action="" method="post")
             .contact-popup__field
                 label(for="contact-user-name") Ваше имя:
                 input(type="text" name="contact-user-name" id="contact-user-name" placeholder="Имя Фамилия")
             .contact-popup__field
-                label(for="contact-user-name") Ваш e-mail:
+                label(for="contact-user-email") Ваш e-mail:
                 input(type="email" name="contact-user-email" id="contact-user-email" placeholder="email@example.com")
             .contact-popup__field.contact-popup__field--textarea
                 label(for="contact-user-text") Текст письма:
                 textarea(name="contact-user-text" id="contact-user-text" placeholder="В свободной форме")
-            .contact-popup__field
+            .contact-popup__field.contact-popup__field--submit
                 button.contact-popup__submit-btn.device-btn(type="submit") Отправить
     button.contact-popup__close-btn(type="button" aria-label="Закрыть окно") Закрыть
