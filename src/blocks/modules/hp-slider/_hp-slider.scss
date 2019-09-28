@@ -9,15 +9,15 @@
     }
 
     &__item {
-        position: relative;
         display: flex;
         flex-direction: row;
-        width: 91%;
+        position: relative;
+        width: 85%;
         margin: 0 auto;
     }
 
     &__item:nth-child(1) &__info {
-        margin-left: 125px;
+        margin-left: 130px;
     }
 
     &__item:nth-child(2) &__info {
@@ -35,9 +35,9 @@
     &__info-title {
         position: relative;
         z-index: 10;
-        padding-top: 45px;
+        padding-top: 50px;
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 27px;
         font-family: $headers-font;
         font-size: 47px;
         color: $dark-color;
@@ -45,7 +45,7 @@
         &::before {
             content: "";
             position: absolute;
-            top: 0;
+            top: 5px;
             left: 0;
             background-color: $light-color;
             width: 100px;
@@ -61,7 +61,7 @@
     }
 
     &__more-btn {
-        margin-top: 60px;
+        margin-top: 45px;
     }
 
     &__product-info {
@@ -70,7 +70,7 @@
         flex-direction: row;
         align-items: center;
         margin: 0;
-        margin-top: 75px;
+        margin-top: 60px;
         padding: 0;
         list-style: none;
         font-size: 36px;
@@ -95,8 +95,8 @@
         top: 65%;
         right: 90px;
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
 
         li:not(:last-child) {
             margin-right: 21px;
@@ -107,11 +107,11 @@
         position: relative;
         width: 12px;
         height: 12px;
+        margin: 0;
         border: 1px solid $dark-color;
+        padding: 0;
         border-radius: 50%;
         background-color: transparent;
-        margin: 0;
-        padding: 0;
 
         &--active {
 
@@ -120,10 +120,10 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                height: 6px;
-                width: 6px;
+                width: 5px;
+                height: 5px;
                 border: 1px solid $dark-color;
+                transform: translate(-50%, -50%);
                 border-radius: 50%;
             }
         }
@@ -134,7 +134,7 @@
     &__counter {
         position: absolute;
         top: -30px;
-        right: 0;
+        right: -40px;
         font-family: $headers-font;
         font-size: 179px;
         color: $light-color;

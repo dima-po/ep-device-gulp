@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 100px;
+    margin-top: 70px;
     padding: 65px 140px;
     background-color: $text-color;
 
@@ -48,6 +48,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        margin: 0;
+        padding: 0;
         list-style: none;
 
         svg {
@@ -100,8 +102,8 @@
 
 
     &__middle {
-        margin-top: 30px;
-        margin-bottom: 50px;
+        margin-top: 35px;
+        margin-bottom: 65px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -116,12 +118,12 @@
     }
 
     &__main-menu {
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
         list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__main-menu-item {

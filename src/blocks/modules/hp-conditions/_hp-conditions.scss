@@ -1,6 +1,6 @@
 .conditions {
     position: relative;
-    margin-top: 150px;
+    margin-top: 160px;
     background-color: #e5e5e5;
 
     $this: ".conditions";
@@ -115,7 +115,7 @@
     }
 
     &__tabs-content-text {
-        flex-basis: 60%;
+        flex-basis: 65%;
 
         h3 {
             font-family: $headers-font;
@@ -133,7 +133,7 @@
     }
 
     &__tabs-content-image {
-        flex-basis: 40%;
+        flex-basis: 35%;
         text-align: center;
     }
 }
