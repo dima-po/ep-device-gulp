@@ -17,6 +17,9 @@
         }
     }
 
+
+
+
     &__top {
         display: flex;
         flex-direction: row;
@@ -24,8 +27,7 @@
         justify-content: space-between;
     }
 
-    &__logo,
-    &__academy-logo {
+    &__logo {
 
         svg {
             fill: $main-color;
@@ -41,16 +43,85 @@
         }
     }
 
+    &__secondary-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+
+        svg {
+            fill: $main-color;
+        }
+
+        li,
+        li a {
+            font-size: 15px;
+            line-height: 36px;
+            color: rgba($light-color, 0.6);
+        }
+
+        li span {
+            margin-left: 14px;
+        }
+
+        li:not(:last-child) {
+            margin-right: 44px;
+        }
+    }
+
+    &__secondary-menu-login {
+            
+        span {
+            margin-left: 14px;
+        }
+    }
+
+    &__secondary-menu-user-info {
+        display: none;
+    }
+
+    &__secondary-menu-user-info-name {
+        margin-left: 14px;
+    }
+
+    &__secondary-menu-user-info-logout {
+        border: 0;
+        padding: 0;
+        margin-left: 18px;
+        background-color: transparent;
+        font-size: 15px;
+        color: rgba($dark-color, 0.3);
+        cursor: pointer;
+    }
+
+
+
+
+
     &__middle {
+        margin-top: 30px;
+        margin-bottom: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
+    &__address {
+        font-size: 15px;
+        font-style: normal;
+        color: $light-color;
+        line-height: 30px;
+    }
+
     &__main-menu {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
     }
 
     &__main-menu-item {
@@ -59,28 +130,27 @@
         line-height: 24px;
         text-transform: uppercase;
         letter-spacing: 3px;
+
+        &:not(:last-child) {
+            margin-right: 38px;
+        }
     }
+
+    &__phone {
+        font-size: 15px;
+        color: $light-color;
+        line-height: 30px;
+    }
+
+
+
+
 
     &__bottom {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-    }
-
-    &__secondary-menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        list-style: none;
-    }
-
-    &__main-menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        list-style: none;
     }
 
     &__line {
@@ -115,7 +185,23 @@
         }
 
         &:active svg {
-            opacity: 0.1;
+            opacity: 0.3;
+        }
+    }
+
+    &__academy-logo {
+
+        svg {
+            fill: $main-color;
+            transition: 0.2s;
+        }
+
+        &:hover svg {
+            opacity: 0.6;
+        }
+
+        &:active svg {
+            opacity: 0.3;
         }
     }
 }
