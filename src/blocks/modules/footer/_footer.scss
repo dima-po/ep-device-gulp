@@ -3,6 +3,10 @@
     padding: 65px 140px;
     background-color: $text-color;
 
+    &-inner {
+        margin-top: 0;
+    }
+
     & a {
         color: $light-color;
         text-decoration: none;

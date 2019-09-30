@@ -9,7 +9,7 @@ main.catalog
                     div.catalog-sidebar__filter-form
                         form(action="" method="GET")
                             fieldset.catalog-sidebar__filter-item
-                                legeng.catalog-sidebar__filter-item-title Стоимость
+                                legend.catalog-sidebar__filter-item-title Стоимость
                                 div.catalog-sidebar__filter-item-range
                                     input(type="text" value="0")
                                     input(type="text" value="3000")
@@ -18,32 +18,30 @@ main.catalog
                                 ul
                                     li.catalog-sidebar__filter-item-group
                                         input(type="checkbox" name="product-color" id="black" value="black") 
-                                        label(for="black") Черный
+                                        label.catalog-sidebar__filter-label-checkbox(for="black") Черный
                                     li.catalog-sidebar__filter-item-group
                                         input(type="checkbox" name="product-color" id="white" value="white") 
-                                        label(for="white") Белый
+                                        label.catalog-sidebar__filter-label-checkbox(for="white") Белый
                                     li.catalog-sidebar__filter-item-group
                                         input(type="checkbox" name="product-color" id="blue" value="blue") 
-                                        label(for="blue") Синий
+                                        label.catalog-sidebar__filter-label-checkbox(for="blue") Синий
                                     li.catalog-sidebar__filter-item-group
                                         input(type="checkbox" name="product-color" id="red" value="red") 
-                                        label(for="red") Красный
+                                        label.catalog-sidebar__filter-label-checkbox(for="red") Красный
                                     li.catalog-sidebar__filter-item-group
                                         input(type="checkbox" name="product-color" id="pink" value="pink") 
-                                        label(for="pink") Розовый
+                                        label.catalog-sidebar__filter-label-checkbox(for="pink") Розовый
 
                             fieldset.catalog-sidebar__filter-item
                                 legend.catalog-sidebar__filter-item-title Bluetooth
                                 ul
                                     li.catalog-sidebar__filter-item-group
                                         input(type="radio" name="bluetooth" id="yes" value="yes")
-                                        label(for="yes") Есть
+                                        label.catalog-sidebar__filter-label-radio(for="yes") Есть
                                     li.catalog-sidebar__filter-item-group
                                         input(type="radio" name="bluetooth" id="no" value="no")
-                                        label(for="no") Нет
-
-                            div.catalog-sidebar__filter-item
-                                button.device-btn(type="submit" aria-label="Применить фильтр") Показать
+                                        label.catalog-sidebar__filter-label-radio(for="no") Нет
+                            button.catalog-sidebar__filter-submit.device-btn(type="submit" aria-label="Применить фильтр") Показать
 
             section.catalog-content
                 h2.visually-hidden Каталог товаров
@@ -76,12 +74,12 @@ main.catalog
                             a.catalog-content__products-link(href="")
                                 picture.catalog-content__products-image
                                     img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                                    div.catalog-content__products-overlay
+                                        button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
+                                        button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
                                 div.catalog-content__products-info
                                     h3.catalog-content__products-name= productItems[index]
                                     span.catalog-content__products-price= productPrice[index]
-                                div.catalog-content__products-overlay
-                                    button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
-                                    button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
 
                     div.catalog-content__products-pagination
                         a.catalog-content__products-pagination-back(href="#") Назад
