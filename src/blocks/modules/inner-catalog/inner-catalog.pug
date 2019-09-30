@@ -1,95 +1,97 @@
-div.catalog-main
+main.catalog
     div.container
-        aside.catalog-sidebar
-            h2.visually-hidden Фильт по товарам
-            div.catalog-sidebar__filter
-                div.catalog-sidebar__filter-title
-                    h3 Фильтр:
-                div.catalog-sidebar__filter-form
-                    form(action="" method="GET")
-                        fieldset.catalog-sidebar__filter-item
-                            legeng.catalog-sidebar__filter-item-title Стоимость
-                            div.catalog-sidebar__filter-item-range
-                                input(type="text" value="0")
-                                input(type="text" value="3000")
-                        fieldset.catalog-sidebar__filter-item
-                            legend.catalog-sidebar__filter-item-title Цвет
-                            ul
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="checkbox" name="product-color" id="black" value="black") 
-                                    label(for="black") Черный
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="checkbox" name="product-color" id="white" value="white") 
-                                    label(for="white") Белый
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="checkbox" name="product-color" id="blue" value="blue") 
-                                    label(for="blue") Синий
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="checkbox" name="product-color" id="red" value="red") 
-                                    label(for="red") Красный
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="checkbox" name="product-color" id="pink" value="pink") 
-                                    label(for="pink") Розовый
+        div.catalog__wrap
+            aside.catalog-sidebar
+                h2.visually-hidden Фильт по товарам
+                div.catalog-sidebar__filter
+                    div.catalog-sidebar__filter-title
+                        h3 Фильтр:
+                    div.catalog-sidebar__filter-form
+                        form(action="" method="GET")
+                            fieldset.catalog-sidebar__filter-item
+                                legeng.catalog-sidebar__filter-item-title Стоимость
+                                div.catalog-sidebar__filter-item-range
+                                    input(type="text" value="0")
+                                    input(type="text" value="3000")
+                            fieldset.catalog-sidebar__filter-item
+                                legend.catalog-sidebar__filter-item-title Цвет
+                                ul
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="checkbox" name="product-color" id="black" value="black") 
+                                        label(for="black") Черный
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="checkbox" name="product-color" id="white" value="white") 
+                                        label(for="white") Белый
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="checkbox" name="product-color" id="blue" value="blue") 
+                                        label(for="blue") Синий
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="checkbox" name="product-color" id="red" value="red") 
+                                        label(for="red") Красный
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="checkbox" name="product-color" id="pink" value="pink") 
+                                        label(for="pink") Розовый
 
-                        fieldset.catalog-sidebar__filter-item
-                            legend.catalog-sidebar__filter-item-title Bluetooth
-                            ul
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="radio" name="bluetooth" id="yes" value="yes")
-                                    label(for="yes") Есть
-                                li.catalog-sidebar__filter-item-group
-                                    input(type="radio" name="bluetooth" id="no" value="no")
-                                    label(for="no") Нет
+                            fieldset.catalog-sidebar__filter-item
+                                legend.catalog-sidebar__filter-item-title Bluetooth
+                                ul
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="radio" name="bluetooth" id="yes" value="yes")
+                                        label(for="yes") Есть
+                                    li.catalog-sidebar__filter-item-group
+                                        input(type="radio" name="bluetooth" id="no" value="no")
+                                        label(for="no") Нет
 
-                        div.catalog-sidebar__filter-item.device-btn
-                            button(type="submit" aria-label="Применить фильтр") Показать
+                            div.catalog-sidebar__filter-item
+                                button.device-btn(type="submit" aria-label="Применить фильтр") Показать
 
-        main.catalog
-            section.catalog__content
+            section.catalog-content
                 h2.visually-hidden Каталог товаров
-                div.catalog__sort
-                    h3 Сортировка:
-                    ul.catalog__sort-nav
-                        li.catalog__sort-nav-item.catalog__sort-nav-item--price
+                div.catalog-content__sort
+                    div.catalog-content__sort-title
+                        h3 Сортировка:
+                    ul.catalog-content__sort-nav
+                        li.catalog-content__sort-nav-item.catalog-content__sort-nav-item--price.catalog-content__sort-nav-item--active
                             button(type="button") По цене
-                        li.catalog__sort-nav-item.catalog__sort-nav-item--type
+                        li.catalog-content__sort-nav-item.catalog-content__sort-nav-item--type
                             button(type="button") По типу
-                        li.catalog__sort-nav-item.catalog__sort-nav-item--popular
+                        li.catalog-content__sort-nav-item.catalog-content__sort-nav-item--popular
                             button(type="button") По популярности
 
-                    .catalog__sort-arrow
-                        button.catalog__sort-arrow-up(type="button" aria-label="Сортировка по возрастанию")
+                    .catalog-content__sort-arrow
+                        button.catalog-content__sort-arrow-up(type="button" aria-label="Сортировка по возрастанию")
                             svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
                                 path(d='M5.5 0L0 10h11z')
 
-                        button.catalog__sort-arrow-down(type="button" aria-label="Сортировка по убыванию")
+                        button.catalog-content__sort-arrow-down(type="button" aria-label="Сортировка по убыванию")
                             svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
                                 path(d='M5.5 10L0 0h11')
 
                 - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
                 - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
                 
-                div.catalog__products
+                div.catalog-content__products
                     each product, index in productItems
-                        article.catalog__products-item
-                            a.catalog__products-item-link(href="")
-                                picture.catalog__products-image
+                        article.catalog-content__products-item
+                            a.catalog-content__products-link(href="")
+                                picture.catalog-content__products-image
                                     img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
-                                h3.catalog__products-name= productItems[index]
-                                span.catalog__products-price= productPrice[index]
-                                div.catalog__products-overlay
-                                    button.catalog__products-overlay-cart-btn.device-btn(type="button") В корзину
-                                    button.catalog__products-overlay-compare-btn(type="button") Добавить к сравнению
+                                div.catalog-content__products-info
+                                    h3.catalog-content__products-name= productItems[index]
+                                    span.catalog-content__products-price= productPrice[index]
+                                div.catalog-content__products-overlay
+                                    button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
+                                    button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
 
-                    div.catalog__products-pagination
-                        a.catalog__products-pagination-back(href="#") Назад
-                        ul.catalog__products-pagination-numbers
+                    div.catalog-content__products-pagination
+                        a.catalog-content__products-pagination-back(href="#") Назад
+                        ul.catalog-content__products-pagination-numbers
                             li
                                 a(href="#") 1
                             li
                                 a(href="#") 2
                             li
                                 a(href="#") 3
-                        a.catalog__products-pagination-next(href="#") Вперед
+                        a.catalog-content__products-pagination-next(href="#") Вперед
                         
 

@@ -25,6 +25,15 @@
         background-color: rgba($main-color, 0.5);
     }
 
+    /* FOR INNER HEADER */
+
+    &.header-inner &__wrap {
+        height: 186px;
+        min-height: 186px;
+    }
+
+    /* END */
+
     &__logo {
         position: absolute;
         top: -19px;
@@ -239,7 +248,7 @@
         font-family: $main-light-font;
         text-transform: initial;
         letter-spacing: 0;
-        display: flex;
+        display: none;
         flex-direction: row;
         position: absolute;
         z-index: 1000;
@@ -256,6 +265,7 @@
         transition: 0.3s;
 
         &--active {
+            display: flex;
             opacity: 1;
         }
 

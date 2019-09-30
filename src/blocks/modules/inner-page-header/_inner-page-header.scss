@@ -1,0 +1,52 @@
+.page-header {
+
+    &__wrap {
+        padding-left: 61px;
+    }
+
+    &__title {
+        font-family: $headers-font;
+        font-size: 47px;
+        line-height: 48px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 25px;
+        margin-top: 35px;
+    }
+
+    &__breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__breadcrumbs-item {
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba($dark-color, 0.3);
+
+        a {
+            color: rgba($dark-color, 0.3);
+            text-decoration: none;
+        }
+
+        &:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 6px;
+            height: 6px;
+            margin-right: 16px;
+            margin-left: 10px;
+            border-top: 2px solid $dark-color;
+            border-right: 2px solid $dark-color;
+            transform: rotate(45deg);
+        }
+    }
+}
