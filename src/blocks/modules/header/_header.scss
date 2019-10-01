@@ -266,10 +266,11 @@
 
         &--active {
             display: flex;
+            flex-wrap: wrap;
             opacity: 1;
         }
 
-        &-block {
+        &-block:not(:nth-child(5n)) {
             margin-right: 60px;
 
             ul {

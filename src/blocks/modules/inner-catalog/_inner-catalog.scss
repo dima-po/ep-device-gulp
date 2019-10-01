@@ -84,10 +84,20 @@
             font-size: 14px;
             line-height: 40px;
             padding-left: 35px;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+    
+            &:active {
+                opacity: 1;
+            }
         }
     }
 
     &__filter-label-checkbox {
+        
 
         &::before {
             content: "";
@@ -205,6 +215,15 @@
             color: rgba($dark-color, 0.3);
             background-color: transparent;
             cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                color: rgba($dark-color, 0.6);
+            }
+
+            &:active {
+                color: $dark-color;
+            }
         }
 
         &:not(:last-child) {
@@ -228,6 +247,16 @@
             padding: 5px 9px;
             background-color: transparent;
             cursor: pointer;
+            opacity: 0.2;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.4;
+            }
+    
+            &:active {
+                opacity: 1;
+            }
         }
     }
 
@@ -306,22 +335,35 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 77px;
-        padding: 10px 30px;
         font-family: $headers-font;
         background-color: $catalog-grey-color;
     }
 
     &__products-pagination-back,
     &__products-pagination-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 23px 30px;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 3.2px;
         text-transform: uppercase;
         text-decoration: none;
         color: $dark-color;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $catalog-dark-grey-color;
+        }
+
+        &:focus {
+            color: rgba($dark-color, 0.3);
+        }
     }
 
-    &__products-pagination-numbers {
+    &__products-pagination-pages {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -332,10 +374,21 @@
         li:not(:last-child) {
             margin-right: 31px;
         }
+    }
 
-        li a {
-            color: $dark-color;
+    &__products-pagination-pages-item {
+
+        a {
+            color: rgba($dark-color, 0.3);
             text-decoration: none;
+
+            &:hover {
+                color: rgba($dark-color, 0.6);
+            }
+
+            &:active {
+                color: rgba($dark-color, 1);
+            }
         }
     }
 
@@ -377,6 +430,10 @@
 
         &:hover {
             color: $dark-color;
+        }
+
+        &:active {
+            color: rgba($dark-color, 0.2);
         }
     }
 }

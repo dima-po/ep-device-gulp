@@ -3,15 +3,19 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-between;
         padding: 0;
         list-style: none;
     }
 
     &__list-item {
         width: 160px;
+
+        &:not(:nth-child(6n)) {
+            margin-right: 40px;
+        }
     }
 
     &__list-link {

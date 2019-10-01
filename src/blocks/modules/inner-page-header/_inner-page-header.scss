@@ -34,6 +34,15 @@
         a {
             color: rgba($dark-color, 0.3);
             text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+                color: rgba($dark-color, 0.6);
+            }
+
+            &:active {
+                color: rgba($dark-color, 0.1);
+            }
         }
 
         &:not(:last-child)::after {
