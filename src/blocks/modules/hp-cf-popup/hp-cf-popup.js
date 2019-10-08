@@ -11,7 +11,7 @@ const mapPopup = document.querySelector(".map-popup");
 
 // Close Contact PopUp button
 contactPopupCloseBtn.addEventListener("click", () => {
-    contactPopup.classList.add("hidden");
+    contactPopup.classList.remove("popup-active");
     overlay.classList.add("hidden");
 });
 

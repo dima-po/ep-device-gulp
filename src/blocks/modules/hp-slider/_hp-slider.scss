@@ -1,5 +1,5 @@
 .slider {
-    margin-top: -100px;
+    margin-top: -112px;
     position: relative;
     z-index: 999;
     counter-reset: slider-number;
@@ -12,7 +12,7 @@
         position: relative;
         display: none;
         flex-direction: row;
-        margin: 0 auto;
+        min-height: 490px;
 
         &--active {
             display: flex;
@@ -26,7 +26,7 @@
 
     &__info {
         flex-basis: 560px;
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: auto;
         // padding-right: 90px;
     }
@@ -35,16 +35,16 @@
         position: relative;
         z-index: 10;
         margin: 0;
-        margin-bottom: 27px;
+        margin-bottom: 20px;
         padding-top: 50px;
         font-family: $headers-font;
-        font-size: 47px;
+        font-size: 48px;
         color: $dark-color;
 
         &::before {
             content: "";
             position: absolute;
-            top: 5px;
+            top: 7px;
             left: 0;
             width: 100px;
             height: 7px;
@@ -60,7 +60,7 @@
     }
 
     &__more-btn {
-        margin-top: 45px;
+        margin-top: 53px;
     }
 
     &__product-info {
@@ -83,14 +83,15 @@
             display: block;
             font-family: $main-light-font;
             font-size: 13px;
-            line-height: 20px;
+            line-height: 1.5;
+            margin-top: 8px;
         }
     }
 
     &__bullets {
         position: absolute;
-        top: 63%;
-        right: 90px;
+        top: 323px;
+        right: 83px;
         display: flex;
         flex-direction: row;
         list-style: none;
@@ -134,7 +135,7 @@
 
     &__counter {
         position: absolute;
-        top: -30px;
+        top: -15px;
         right: 50px;
         font-family: $headers-font;
         font-size: 179px;

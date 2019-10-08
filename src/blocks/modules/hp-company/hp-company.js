@@ -3,7 +3,7 @@ const mapBtn = document.querySelector(".company__contacts-map-btn");
 const contactUserFocus = document.querySelector("[name=contact-user-name]");
 
 companyBtn.addEventListener("click", () => {
-    document.querySelector(".contact-popup").classList.remove("hidden");
+    document.querySelector(".contact-popup").classList.add("popup-active");
     document.querySelector(".popup-overlay").classList.remove("hidden");
     contactUserFocus.focus();
 });

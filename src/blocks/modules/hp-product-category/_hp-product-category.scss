@@ -1,5 +1,5 @@
 .products-category {
-    margin-top: 90px;
+    margin-top: 102px;
 
     &__list {
         display: flex;
@@ -36,6 +36,10 @@
         background-color: rgba($main-color, 0.5);
         transition: background-color 0.2s;
 
+        &--align-end {
+            align-items: flex-end;
+        }
+
         &:hover {
             background-color: $main-color;
         }
@@ -54,9 +58,9 @@
     }
 
     &__list-title {
-        margin-top: 36px;
+        margin-top: 34px;
         font-family: $headers-font;
         font-size: 18px;
-        line-height: 22px;
+        line-height: 23px;
     }
 }

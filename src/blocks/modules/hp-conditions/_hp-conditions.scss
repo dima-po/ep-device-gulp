@@ -15,7 +15,7 @@
     }
 
     &__tabs {
-        flex-basis: 25%;
+        flex-basis: 285px;
     }
 
     /* TABS BUTTONS */
@@ -23,8 +23,8 @@
     &__tabs-switch {
         margin: 0;
         padding: 0;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 78px;
+        padding-bottom: 69px;
         border-right: 7px solid $dark-color;
         list-style: none;
     }
@@ -97,12 +97,12 @@
     /* TABS CONTENT */ 
     
     &__tabs-content {
-        flex-basis: 75%;
+        flex-basis: 875px;
     }
 
     &__tabs-content-list {
         margin: 0;
-        margin-left: 100px;
+        margin-left: 117px;
         padding: 0;
         list-style: none;
     }
@@ -124,7 +124,8 @@
 
         h3 {
             margin: 0;
-            margin-bottom: 43px;
+            margin-top: -5px;
+            margin-bottom: 30px;
             font-family: $headers-font;
             font-size: 47px;
             line-height: 48px;

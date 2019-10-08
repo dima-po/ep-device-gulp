@@ -1,6 +1,6 @@
 .footer {
-    margin-top: 70px;
-    padding: 65px 140px;
+    margin-top: 65px;
+    padding: 75px 140px;
     background-color: $text-color;
 
     &-inner {
@@ -53,6 +53,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0;
+        margin-top: -12px;
         padding: 0;
         list-style: none;
 
@@ -72,7 +73,7 @@
         }
 
         li:not(:last-child) {
-            margin-right: 44px;
+            margin-right: 31px;
         }
     }
 
@@ -106,16 +107,17 @@
 
 
     &__middle {
-        margin-top: 35px;
-        margin-bottom: 65px;
+        margin-top: 30px;
+        margin-bottom: 60px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
     &__address {
-        font-size: 15px;
+        margin-right: 170px;
+        font-size: 14px;
         font-style: normal;
         color: $light-color;
         line-height: 30px;
@@ -125,9 +127,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        list-style: none;
         margin: 0;
+        margin-right: 189px;
         padding: 0;
+        list-style: none;
     }
 
     &__main-menu-item {
@@ -135,7 +138,7 @@
         font-size: 18px;
         line-height: 24px;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: 3.6px;
 
         &:not(:last-child) {
             margin-right: 38px;
@@ -149,17 +152,15 @@
     }
 
 
-
-
-
     &__bottom {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
     &__line {
+        margin-right: 429px;
         width: 80px;
         height: 7px;
         background-color: $main-color;
@@ -196,6 +197,7 @@
     }
 
     &__academy-logo {
+        margin-left: auto;
 
         svg {
             fill: $main-color;
