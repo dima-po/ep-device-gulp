@@ -5,35 +5,35 @@ section.conditions
             .conditions__tabs
                 ul.conditions__tabs-switch
                     li.conditions__tabs-switch-item.conditions__tabs-switch-item--active
-                        button.conditions__tabs-switch-btn(type="button") Доставка
+                        button.conditions__tabs-switch-btn(type="button" data-switch="1") Доставка
 
                     li.conditions__tabs-switch-item
-                        button.conditions__tabs-switch-btn(type="button") Гарантия
+                        button.conditions__tabs-switch-btn(type="button" data-switch="2") Гарантия
 
                     li.conditions__tabs-switch-item
-                        button.conditions__tabs-switch-btn(type="button") Кредит
+                        button.conditions__tabs-switch-btn(type="button" data-switch="3") Кредит
 
             .conditions__tabs-content
                 ul.conditions__tabs-content-list
-                    li.conditions__tabs-content-list-item
+                    li.conditions__tabs-content-list-item.conditions__tabs-content-list-item--active(data-tab="1")
                         .conditions__tabs-content-text
                             h3 Доставка
                             p Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-                        pisture.conditions__tabs-content-image
+                        picture.conditions__tabs-content-image
                             img(src="img/conditions-delivery.svg" alt="Доставка")
 
-                    li.conditions__tabs-content-list-item.visually-hidden
+                    li.conditions__tabs-content-list-item(data-tab="2")
                         .conditions__tabs-content-text
                             h3 Гарантия
                             p Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-                        pisture.conditions__tabs-content-image
+                        picture.conditions__tabs-content-image
                             img(src="img/conditions-warranty.svg" alt="Гарантия")
 
-                    li.conditions__tabs-content-list-item.visually-hidden
+                    li.conditions__tabs-content-list-item(data-tab="3")
                         .conditions__tabs-content-text
                             h3 Кредит
                             p Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
-                        pisture.conditions__tabs-content-image
+                        picture.conditions__tabs-content-image
                             img(src="img/conditions-credit.svg" alt="Кредит")
         
                 

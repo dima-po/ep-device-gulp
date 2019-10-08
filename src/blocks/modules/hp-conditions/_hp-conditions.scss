@@ -6,12 +6,12 @@
     $this: ".conditions";
 
     &__wrap {
+        position: relative;
+        top: -100px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        position: relative;
-        top: -100px;
     }
 
     &__tabs {
@@ -56,7 +56,6 @@
         position: relative;
         z-index: 1;
         min-width: 160px;
-        border: 0;
         padding: 0;
         padding-top: 8px;
         padding-bottom: 8px;
@@ -66,19 +65,20 @@
         font-size: 18px;
         line-height: 24px;
         letter-spacing: 3px;
-        text-transform: uppercase;
+        border: 0;
         background-color: transparent;
+        text-transform: uppercase;
         cursor: pointer;
 
         &::after {
             content: "";
             position: absolute;
-            z-index: -1;
             top: 50%;
             right: 0;
             left: 0;
-            background-color: $main-color;
+            z-index: -1;
             height: 8px;
+            background-color: $main-color;
             transform: translateY(-50%);
             transition: height 0.2s;
             will-change: height;
@@ -108,27 +108,32 @@
     }
 
     &__tabs-content-list-item {
-        display: flex;
+        display: none;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        &--active {
+            display: flex;
+        }
+
     }
 
     &__tabs-content-text {
         flex-basis: 65%;
 
         h3 {
+            margin: 0;
+            margin-bottom: 43px;
             font-family: $headers-font;
             font-size: 47px;
             line-height: 48px;
-            margin: 0;
-            margin-bottom: 43px;
         }
 
         p {
+            margin: 0;
             font-size: 15px;
             line-height: 30px;
-            margin: 0;
         }
     }
 

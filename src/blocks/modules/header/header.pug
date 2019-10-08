@@ -9,7 +9,7 @@ if !innerHeader
 
                 ul.header__secondary-menu
                     li.header__secondary-menu-search
-                        form(action="/" method="GET")
+                        form(action="https://echo.htmlacademy.ru/" method="GET")
                             input.header__secondary-menu-search-input(type="text" name="search" placeholder="Поиск по сайту" autocomplete="off")
                             button.header__secondary-menu-search-btn(type="submit") Найти
                     
@@ -41,7 +41,7 @@ if !innerHeader
                 ul.header__main-menu
                     li.header__main-menu-item
                         a.header__main-menu-item--dropdown(href="catalog.html") Каталог товаров
-                        ul.header__main-menu-submenu(aria-label="Выпадающее меню каталога")
+                        ul.header__main-menu-submenu
                             li.header__main-menu-submenu-block
                                 ul
                                     li.header__main-menu-submenu-item
@@ -115,7 +115,7 @@ else
                 ul.header__main-menu
                     li.header__main-menu-item
                         a.header__main-menu-item--dropdown(href="catalog.html") Каталог товаров
-                        ul.header__main-menu-submenu(aria-label="Выпадающее меню каталога")
+                        ul.header__main-menu-submenu
                             li.header__main-menu-submenu-block
                                 ul
                                     li.header__main-menu-submenu-item

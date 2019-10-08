@@ -1,10 +1,10 @@
-.contact-popup-overlay {
+.popup-overlay {
     position: fixed;
-    z-index: 9998;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 9998;
     width: 100%;
     height: 100%;
     background-color: rgba($dark-color, 0.5);
@@ -12,14 +12,19 @@
 
 .contact-popup {
     position: fixed;
-    z-index: 9999;
     top: 50%;
     left: 50%;
     width: 100%;
+    z-index: 9999;
     max-width: 960px;
     padding: 100px;
-    transform: translate(-50%, -50%);
     background-color: $light-color;
+    transform: translate(-50%, -50%);
+
+    &--fill-error {
+        animation-name: bounce;
+        animation-duration: 0.5s;
+    }
 
     &__wrap {
 
@@ -40,19 +45,25 @@
         margin-right: 40px;
 
         label {
+            margin-bottom: 10px;
             font-family: $headers-font;
             font-size: 18px;
             line-height: 24px;
-            margin-bottom: 10px;
         }
 
         input,
         textarea {
             border: 0;
             padding: 15px;
-            background-color: rgba($text-color, 0.09);
             font-size: 14px;
             color: $text-color;
+            background-color: rgba($text-color, 0.09);
+
+            &:focus {
+                background-color: $light-color;
+                color: $dark-color;
+                outline: 2px solid $main-light-color;
+            }
         }
 
         textarea {
@@ -76,56 +87,81 @@
     &__submit-btn {
         flex-grow: 0;
     }
+}
 
 
-    &__close-btn {
-        position: absolute;
-        top: 22px;
-        right: 22px;
-        width: 55px;
-        height: 55px;
-        border: 0;
-        font-size: 0;
-        background-color: $main-light-color;
-        border-radius: 50%;
-        transition: 0.3s;
-        cursor: pointer;
+.map-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    max-width: 960px;
+    height: 559px;
+    background-color: $light-color;
+    transform: translateX(-50%);
 
-        &:hover {
-            background-color: $main-color;
-        }
-
-        &:active {
-            background-color: rgba($main-color, 0.5);
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 30px;
-            height: 2px;
-            transform-origin: center;
-            background-color: $light-color;
-            transition: 0.3s;
-        }
-
-        &::before {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        &::after {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        &:hover::before {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        &:hover::after {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
+    &__wrap {
+        width: 100%;
+        height: 100%;
     }
+}
+
+
+.popup-close-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 55px;
+    height: 55px;
+    border: 0;
+    font-size: 0;
+    border-radius: 50%;
+    background-color: $main-light-color;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $main-color;
+    }
+
+    &:active {
+        background-color: rgba($main-color, 0.5);
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: $light-color;
+        transition: 0.3s;
+        transform-origin: center;
+    }
+
+    &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:hover::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:hover::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.popup-active {
+    display: block;
+    animation-name: popup-dropdown;
+    animation-duration: 0.3s;
 }

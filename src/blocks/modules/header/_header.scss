@@ -18,7 +18,6 @@
 
     &__wrap {
         position: relative;
-        height: 300px;
         min-height: 300px;
         padding-left: 60px;
         padding-right: 60px;
@@ -28,7 +27,6 @@
     /* FOR INNER HEADER */
 
     &.header-inner &__wrap {
-        height: 186px;
         min-height: 186px;
     }
 
@@ -44,11 +42,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        list-style: none;
         margin: 0;
         padding: 0;
         padding-top: 33px;
         font-size: 15px;
+        list-style: none;
 
         & li:not(:first-child):not(:last-child) {
             margin-right: 40px;
@@ -59,8 +57,8 @@
     /* SEARCH */
 
     &__secondary-menu-search {
-        flex-basis: 42%;
-        width: 42%;
+        flex-basis: 440px;
+        width: 440px;
         margin-right: 100px;
 
         form {
@@ -73,13 +71,13 @@
         &-input {
             width: 100%;
             height: 100%;
-            border: 0;
             padding: 14px 14px 14px 35px;
             font-size: 15px;
             background: transparent url("../img/icon-search.svg") no-repeat;
             background-position: 0 50%;
-            transition: 0.2s;
+            border: 0;
             border-bottom: 2px solid transparent;
+            transition: 0.2s;
 
             &:focus {
                 border-bottom: 2px solid $dark-color;
@@ -102,14 +100,14 @@
         }
 
         &-btn {
-            border: 2px solid $dark-color;
             padding: 14px 17px;
+            border: 2px solid $dark-color;
+            background-color: transparent;
             font-size: 15px;
             color: $dark-color;
-            background-color: transparent;
             transition: 0.1s;
-            cursor: pointer;
             visibility: hidden;
+            cursor: pointer;
 
 
             &:hover {
@@ -146,8 +144,8 @@
                 border: 0;
                 padding: 0;
                 margin-left: 18px;
-                background-color: transparent;
                 font-size: 15px;
+                background-color: transparent;
                 color: rgba($dark-color, 0.3);
                 cursor: pointer;
             }
@@ -181,14 +179,14 @@
     /* MAIN MENU */
     
     &__main-menu {
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
-        position: relative;
-        list-style: none;
         margin: 0;
-        padding: 0;
         margin-top: 30px;
+        padding: 0;
+        list-style: none;
     }
 
 
@@ -197,8 +195,8 @@
     &__main-menu-item {
         font-family: $headers-font;
         font-size: 18px;
-        text-transform: uppercase;
         letter-spacing: 3.6px;
+        text-transform: uppercase;
 
         & ul {
             list-style: none;
@@ -209,9 +207,15 @@
         }
 
         &:first-child {
-            flex-basis: 42%;
-            width: 42%;
-            margin-right: 100px;
+            position: relative;
+            flex-basis: 540px;
+            width: 540px;
+
+            &:hover .header__main-menu-submenu {
+                display: flex;
+                flex-wrap: wrap;
+                opacity: 1;
+            }
         }
 
         &:last-child {
@@ -233,10 +237,26 @@
                 height: 2px;
                 background-color: $secondary-color;
                 transform: translateY(-50%) rotate(90deg);
+                transition: 0.3s;
             }
 
             &::after {
                 transform: translateY(-50%) rotate(0);
+            }
+
+            &:hover .header__main-menu-submenu {
+                display: flex;
+                flex-wrap: wrap;
+                opacity: 1;
+            }
+
+
+            &:hover::before {
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            &:hover::after {
+                transform: translateY(-50%) rotate(-45deg);
             }
         }
     }
@@ -245,21 +265,24 @@
     /* MAIN MENU DROPDOWN */
 
     &__main-menu-submenu {
-        font-family: $main-light-font;
-        text-transform: initial;
-        letter-spacing: 0;
-        display: none;
-        flex-direction: row;
         position: absolute;
-        z-index: 1000;
         top: 50px;
         right: -60px;
         left: -60px;
-        font-size: 15px;
+        z-index: 1000;
+
+        display: none;
+        flex-direction: row;
+        width: $basic-width;
         padding: 0;
         padding-right: 60px;
         padding-left: 60px;
         padding-bottom: 30px;
+        
+        font-family: $main-light-font;
+        font-size: 15px;
+        text-transform: initial;
+        letter-spacing: 0;
         background-color: $main-light-color;
         opacity: 0;
         transition: 0.3s;

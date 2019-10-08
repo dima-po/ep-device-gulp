@@ -1,7 +1,7 @@
 section.slider
     .container
         div.slider__wrap
-            div.slider__item
+            div.slider__item.slider__item--active(data-slider="1")
                 picture.slider__image
                     img(src="img/slider-image-1.png" alt="Изображение товара")
                 div.slider__info
@@ -20,11 +20,13 @@ section.slider
                             span Материал
                 div.slider__counter
 
-            div.slider__item.visually-hidden
+            div.slider__item(data-slider="2")
                 picture.slider__image
                     img(src="img/slider-image-2.png" alt="Изображение товара")
                 div.slider__info
-                    h2.slider__info-title Худеем правильно!
+                    h2.slider__info-title Худеем
+                        br
+                        | правильно!
                     p.slider__info-description Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                     div.slider__more-btn
                         a.device-btn(href="#") Подробнее
@@ -33,11 +35,13 @@ section.slider
                             span Без подзарядки
                 .slider__counter
 
-            div.slider__item.visually-hidden
+            div.slider__item(data-slider="3")
                 picture.slider__image
                     img(src="img/slider-image-3.png" alt="Изображение товара")
                 div.slider__info
-                    h2.slider__info-title Порхает как бабочка, жалит как пчела!
+                    h2.slider__info-title Порхает как бабочка,
+                        br
+                        | жалит как пчела!
                     p.slider__info-description Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                     div.slider__more-btn
                         a.device-btn(href="#") Подробнее
@@ -50,11 +54,11 @@ section.slider
 
             ul.slider__bullets
                 li
-                    button.slider__bullets-btn.slider__bullets-btn--active(type="button" aria-label="Переключение слайдера") 
+                    button.slider__bullets-btn.slider__bullets-btn--active(type="button" aria-label="Переключение слайдера" data-slider-button="1") 
                 li
-                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
+                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера" data-slider-button="2") 
                 li
-                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера") 
+                    button.slider__bullets-btn(type="button" aria-label="Переключение слайдера" data-slider-button="3") 
 
 
                 

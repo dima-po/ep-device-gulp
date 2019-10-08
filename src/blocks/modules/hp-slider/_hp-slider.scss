@@ -9,35 +9,34 @@
     }
 
     &__item {
-        display: flex;
-        flex-direction: row;
         position: relative;
-        width: 85%;
+        display: none;
+        flex-direction: row;
         margin: 0 auto;
+
+        &--active {
+            display: flex;
+        }
     }
 
-    &__item:nth-child(1) &__info {
-        margin-left: 130px;
-    }
-
-    &__item:nth-child(2) &__info {
-        margin-left: 125px;
-    }
-
-    &__item:nth-child(3) &__info {
-        margin-left: 50px;
+    &__image {
+        flex-basis: 560px;
+        text-align: center;
     }
 
     &__info {
+        flex-basis: 560px;
         margin-top: 20px;
+        margin-left: auto;
+        // padding-right: 90px;
     }
 
     &__info-title {
         position: relative;
         z-index: 10;
-        padding-top: 50px;
         margin: 0;
         margin-bottom: 27px;
+        padding-top: 50px;
         font-family: $headers-font;
         font-size: 47px;
         color: $dark-color;
@@ -47,9 +46,9 @@
             position: absolute;
             top: 5px;
             left: 0;
-            background-color: $light-color;
             width: 100px;
             height: 7px;
+            background-color: $light-color;
         }
     }
 
@@ -65,16 +64,16 @@
     }
 
     &__product-info {
-        font-family: $headers-light-font;
         display: flex;
         flex-direction: row;
         align-items: center;
         margin: 0;
         margin-top: 60px;
         padding: 0;
-        list-style: none;
+        font-family: $headers-light-font;
         font-size: 36px;
         line-height: 48px;
+        list-style: none;
 
         li:not(:last-child) {
             margin-right: 80px;
@@ -89,11 +88,11 @@
     }
 
     &__bullets {
+        position: absolute;
+        top: 63%;
+        right: 90px;
         display: flex;
         flex-direction: row;
-        position: absolute;
-        top: 65%;
-        right: 90px;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -108,10 +107,12 @@
         width: 12px;
         height: 12px;
         margin: 0;
-        border: 1px solid $dark-color;
         padding: 0;
-        border-radius: 50%;
         background-color: transparent;
+        border: 1px solid $dark-color;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
 
         &--active {
 
@@ -123,8 +124,8 @@
                 width: 5px;
                 height: 5px;
                 border: 1px solid $dark-color;
-                transform: translate(-50%, -50%);
                 border-radius: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -134,7 +135,7 @@
     &__counter {
         position: absolute;
         top: -30px;
-        right: -40px;
+        right: 50px;
         font-family: $headers-font;
         font-size: 179px;
         color: $light-color;

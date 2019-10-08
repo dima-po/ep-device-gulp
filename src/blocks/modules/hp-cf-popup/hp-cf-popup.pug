@@ -1,7 +1,8 @@
-div.contact-popup-overlay.hidden
+div.popup-overlay.hidden
+
 div.contact-popup.hidden
     .contact-popup__wrap
-        form(action="" method="post")
+        form(action="https://echo.htmlacademy.ru/" method="post")
             .contact-popup__field
                 label(for="contact-user-name") Ваше имя:
                 input(type="text" name="contact-user-name" id="contact-user-name" placeholder="Имя Фамилия")
@@ -13,4 +14,9 @@ div.contact-popup.hidden
                 textarea(name="contact-user-text" id="contact-user-text" placeholder="В свободной форме")
             .contact-popup__field.contact-popup__field--submit
                 button.contact-popup__submit-btn.device-btn(type="submit") Отправить
-    button.contact-popup__close-btn(type="button" aria-label="Закрыть окно") Закрыть
+    button.contact-popup__close-btn.popup-close-btn(type="button" aria-label="Закрыть окно") Закрыть
+
+div.map-popup
+    .map-popup__wrap
+        iframe(src='https://yandex.com/map-widget/v1/?um=constructor%3A8f7a60e72f65cf1ce95a32ee0966d5aeedbce068c0639b28f73ad40d54e1eda3&source=constructor', width='100%', height='100%', frameborder='0')
+    button.map-popup__close-btn.popup-close-btn(type="button" aria-label="Закрыть окно") Закрыть
