@@ -11,8 +11,16 @@ main.catalog
                             fieldset.catalog-sidebar__filter-item
                                 legend.catalog-sidebar__filter-item-title Стоимость
                                 div.catalog-sidebar__filter-item-range
-                                    input(type="text" value="0")
-                                    input(type="text" value="3000")
+                                    div.catalog-sidebar__filter-item-range-controls
+                                        div.catalog-sidebar__filter-item-range-bar
+                                            div.catalog-sidebar__filter-item-range-active
+                                        div.catalog-sidebar__filter-item-range-min
+                                        div.catalog-sidebar__filter-item-range-max
+                                    label.catalog-sidebar__filter-item-range-label(for="range-min-value") от
+                                    input.catalog-sidebar__filter-item-range-value(type="text" id="range-min-value" value="0")
+                                    
+                                    label.catalog-sidebar__filter-item-range-label(for="range-max-value") до
+                                    input.catalog-sidebar__filter-item-range-value(type="text" id="range-max-value" value="5000")
                             fieldset.catalog-sidebar__filter-item
                                 legend.catalog-sidebar__filter-item-title Цвет
                                 ul

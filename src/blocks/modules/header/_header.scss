@@ -209,7 +209,6 @@
 
         &:first-child {
             position: relative;
-            flex-basis: 540px;
             width: 540px;
 
             &:hover .header__main-menu-submenu {
@@ -220,6 +219,8 @@
         }
 
         &:last-child {
+            position: relative;
+            right: -5px;
             margin-left: auto;
         }
 

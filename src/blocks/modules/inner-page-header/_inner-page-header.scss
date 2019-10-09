@@ -27,14 +27,30 @@
 
     &__breadcrumbs-item {
         position: relative;
+        margin-right: 35px;
         font-size: 14px;
         line-height: 24px;
         color: rgba($dark-color, 0.3);
 
         a {
+            position: relative;
             color: rgba($dark-color, 0.3);
             text-decoration: none;
             transition: 0.2s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 7px;
+                right: -35px;
+                width: 7px;
+                height: 7px;
+                margin-right: 16px;
+                margin-left: 10px;
+                border-top: 2px solid $dark-color;
+                border-right: 2px solid $dark-color;
+                transform: rotate(45deg) scale(0.8);
+            }
 
             &:hover {
                 color: rgba($dark-color, 0.6);
@@ -45,17 +61,6 @@
             }
         }
 
-        &:not(:last-child)::after {
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            width: 6px;
-            height: 6px;
-            margin-right: 16px;
-            margin-left: 10px;
-            border-top: 2px solid $dark-color;
-            border-right: 2px solid $dark-color;
-            transform: rotate(45deg);
-        }
+        
     }
 }

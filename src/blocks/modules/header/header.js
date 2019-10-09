@@ -7,7 +7,7 @@ document.getElementsByClassName("header__secondary-menu-search-input")[0].addEve
 });
 
 document.querySelector(".header__main-menu-item--dropdown").addEventListener("click", function(e){
-    e.preventDefault();
+    // e.preventDefault();
 	document.querySelector(".header__main-menu-submenu").classList.toggle("header__main-menu-submenu--active");
 });
 
