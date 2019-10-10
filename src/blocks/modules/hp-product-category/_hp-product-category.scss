@@ -28,11 +28,13 @@
     }
 
     &__list-image {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         min-height: 160px;
+        margin-bottom: 34px;
         background-color: rgba($main-color, 0.5);
         transition: background-color 0.2s;
 
@@ -52,15 +54,25 @@
             }
         }
 
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
         &:nth-child(2) {
             align-items: flex-end;
         }
     }
 
     &__list-title {
-        margin-top: 34px;
+        display: table-cell;
+        margin-top: 0;
         font-family: $headers-font;
         font-size: 18px;
         line-height: 23px;
+        word-break: break-word;
+        word-wrap: break-word;
     }
 }

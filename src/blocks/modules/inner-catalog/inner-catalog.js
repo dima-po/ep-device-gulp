@@ -1,15 +1,21 @@
-var line = document.querySelector(".price-controls");
+const line = document.querySelector(".catalog-sidebar__filter-item-range-controls");
+console.info(line);
+
+
 if (line) {
-    var bar = document.querySelector(".bar")
-      , minPrice = document.querySelector("input[name='min-price']")
-      , maxPrice = document.querySelector("input[name='max-price']")
-      , point1 = document.querySelector(".range-toggle-min")
-      , point2 = document.querySelector(".range-toggle-max")
-      , coordsLine = line.getBoundingClientRect()
-      , maxPriceValue = 9e3
-      , pixelPriceValue = maxPriceValue / line.clientWidth
-      , downTarget = ""
-      , mouseDown = function(e) {
+
+      let bar = document.querySelector(".catalog-sidebar__filter-item-range-active");
+      let minPrice = document.querySelector("input[name='min-price']");
+      let maxPrice = document.querySelector("input[name='max-price']");
+      let point1 = document.querySelector(".catalog-sidebar__filter-item-range-min");
+      let point2 = document.querySelector(".catalog-sidebar__filter-item-range-max");
+      let coordsLine = line.getBoundingClientRect();
+      let maxPriceValue = 5000;
+      let pixelPriceValue = maxPriceValue / line.clientWidth;
+      let downTarget = "";
+
+
+      const mouseDown = function(e) {
         downTarget = e.target;
         var r = e.clientX - downTarget.getBoundingClientRect().left
           , t = function(e) {
@@ -31,8 +37,8 @@ if (line) {
                 bar.style.left = point1.offsetLeft + t.width / 2 + "px",
                 bar.style.width = point2.offsetLeft - point1.offsetLeft + "px"
             };
-            downTarget.classList.contains("range-toggle-min") && d(s, i, a),
-            downTarget.classList.contains("range-toggle-max") && d(l, n, c),
+            downTarget.classList.contains("catalog-sidebar__filter-item-range-min") && d(s, i, a),
+            downTarget.classList.contains("catalog-sidebar__filter-item-range-max") && d(l, n, c),
             minPrice.value = (point1.offsetLeft - i) * pixelPriceValue,
             maxPrice.value = (point2.offsetLeft + point2.offsetWidth / 2) * pixelPriceValue
         };
