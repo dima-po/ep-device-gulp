@@ -1,13 +1,35 @@
 .partners {
     margin-top: 63px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        
+        &__item {
+            width: 260px;
+            height: 100px;
+            background-size: contain;
+            transition: 0.2s;
+        }
+
+        @for $i from 1 through 4 {
+            &__item:nth-child(#{$i}) {
+                background: url("../img/grey-partner-logo-#{$i}.png") no-repeat center;
+    
+                &:hover {
+                    background-image: url("../img/partner-logo-#{$i}.png");
+                }
+            }
+        }
+        
+        &__image {
+            display: none;
+        }
+    }
     
     &__wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
-    &__item {}
 
     &__image {
         filter: grayscale(1);

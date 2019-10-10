@@ -24,13 +24,9 @@
         background-color: rgba($main-color, 0.5);
     }
 
-    /* FOR INNER HEADER */
-
     &.header-inner &__wrap {
         min-height: 186px;
     }
-
-    /* END */
 
     &__logo {
         position: absolute;
@@ -52,9 +48,8 @@
             margin-right: 40px;
         }
     }
-    
 
-    /* SEARCH */
+
 
     &__secondary-menu-search {
         flex-basis: 440px;
@@ -122,8 +117,6 @@
     }
 
 
-    /* USER */
-
     &__secondary-menu-user {
             
         &-login {
@@ -153,8 +146,6 @@
     }
 
 
-    /* COMPARE */
-
     &__secondary-menu-compare {
         margin-left: auto;
 
@@ -163,8 +154,6 @@
         }
     }
 
-
-    /* CART */
 
     &__secondary-menu-cart {
 
@@ -175,8 +164,6 @@
 
 
 
-
-    /* MAIN MENU */
     
     &__main-menu {
         position: relative;
@@ -189,8 +176,6 @@
         list-style: none;
     }
 
-
-    /* MAIN MENU ITEM */
 
     &__main-menu-item {
         height: 60px;
@@ -211,7 +196,7 @@
             position: relative;
             width: 540px;
 
-            &:hover .header__main-menu-submenu {
+            &:hover .header__submenu {
                 display: flex;
                 flex-wrap: wrap;
                 opacity: 1;
@@ -264,9 +249,7 @@
     }
 
 
-    /* MAIN MENU DROPDOWN */
-
-    &__main-menu-submenu {
+    &__submenu {
         position: absolute;
         top: 50px;
         right: -60px;
@@ -305,7 +288,7 @@
 
         &-item {
             margin-bottom: 20px;
-            text-transform: capitalize;
+            text-transform: none;
         }
     }
 }

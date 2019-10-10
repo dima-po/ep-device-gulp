@@ -22,9 +22,6 @@
         }
     }
 
-
-
-
     &__top {
         display: flex;
         flex-direction: row;
@@ -122,6 +119,10 @@
         font-style: normal;
         color: $light-color;
         line-height: 30px;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin-right: 167px;
+        }
     }
 
     &__main-menu {
@@ -132,6 +133,11 @@
         margin-right: 189px;
         padding: 0;
         list-style: none;
+
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin-right: 186px;
+        }
     }
 
     &__main-menu-item {

@@ -38,10 +38,7 @@
         background-color: rgba($main-color, 0.5);
         transition: background-color 0.2s;
 
-        &--align-end {
-            align-items: flex-end;
-        }
-
+        
         &:hover {
             background-color: $main-color;
         }
@@ -58,11 +55,17 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
-
-        &:nth-child(2) {
+        
+        &--align-end {
             align-items: flex-end;
+
+            img {
+                top: auto;
+                bottom: 0;
+                transform: translate(-50%, 0);
+            }
         }
     }
 

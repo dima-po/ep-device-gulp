@@ -11,6 +11,10 @@ body {
     padding: 0;
     font-family: $main-font;
     font-size: $base-font-size;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        overflow-x: hidden;
+    }
 }
 
 img {

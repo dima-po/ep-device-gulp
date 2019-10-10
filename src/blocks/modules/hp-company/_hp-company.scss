@@ -13,6 +13,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        width: 560px;
         min-height: 580px;
         margin-right: 40px;
     }
@@ -22,6 +23,10 @@
         margin-top: 35px;
         padding: 0;
         list-style: none;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin-bottom: -10px;
+        }
     }
 
     &__about-list-item {
@@ -48,6 +53,10 @@
     &__about-btn,
     &__contacts-btn {
         margin-top: auto;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin-top: 71px;
+        }
     }
 
     &__contacts {
@@ -55,6 +64,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        width: 560px;
         min-height: 580px;
     }
 
@@ -91,10 +101,15 @@
     }
 
     & p {
+        
         margin: 0;
         margin-bottom: 32px;
         font-size: 15px;
         line-height: 30px;
         color: $text-color;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            width: 500px;
+        }
     }
 }

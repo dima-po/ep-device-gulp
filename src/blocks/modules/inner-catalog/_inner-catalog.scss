@@ -26,7 +26,8 @@
         z-index: 1;
         display: flex;
         align-items: center;
-        min-height: 70px;
+        padding-top: 23px;
+        padding-bottom: 22px;
         padding-left: 5px;
 
         &::before {
@@ -41,6 +42,7 @@
         }
 
         h3 {
+            margin: 0;
             font-family: $headers-font;
             font-size: 17px;
             line-height: 1.5;
@@ -259,13 +261,15 @@
 
 .catalog-content {
     // flex-basis: 72%;
+    width: 830px;
 
     &__sort {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        min-height: 70px;
+        padding-top: 22px;
+        padding-bottom: 22px;
         padding-left: 71px;
         background-color: $catalog-grey-color;
     }
@@ -273,6 +277,7 @@
     &__sort-title {
 
         h3 {
+            margin: 0;
             font-family: $headers-font;
             font-size: 17px;
             line-height: 1.5;

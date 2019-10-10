@@ -4,6 +4,8 @@
     z-index: 999;
     counter-reset: slider-number;
 
+    $this: ".slider";
+
     &__wrap {
         position: relative;
     }
@@ -115,6 +117,8 @@
         outline: none;
         cursor: pointer;
 
+        
+
         &--active {
 
             &::after {
@@ -122,16 +126,22 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 5px;
-                height: 5px;
+                width: 6px;
+                height: 6px;
                 border: 1px solid $dark-color;
                 border-radius: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(0.85);
+
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                    // IE10+ CSS here
+
+                    top: 2px;
+                    left: 2px;
+                    transform: none;
+                }
             }
         }
     }
-
-    
 
     &__counter {
         position: absolute;
@@ -142,9 +152,17 @@
         color: $light-color;
         line-height: 1;
 
-        &::before {
-            counter-increment: slider-number;
-            content: "0" counter(slider-number);
+        // &::before {
+        //     counter-increment: slider-number;
+        //     content: "0" counter(slider-number);
+        // }
+    }
+
+
+    @for $i from 1 through 3 {
+
+        &__item:nth-child(#{$i}) &__counter::before {
+            content: "0#{$i}";
         }
     }
 }
