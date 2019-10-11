@@ -34,8 +34,8 @@ img {
     // @include lg(max-width, rem(930));
     // @include xl(max-width, rem(1110));
     width: $basic-width;
-    padding: 0 20px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .visually-hidden {
@@ -53,17 +53,17 @@ img {
 }
 
 .device-btn {
+    position: relative;
+    z-index: 1;
     padding-left: 43px;
     padding-right: 43px;
     padding-top: 11px;
     padding-bottom: 11px;
-    position: relative;
-    z-index: 1;
-    border: 0;
     background-color: transparent;
     text-decoration: none;
     text-transform: uppercase;
     color: $dark-color;
+    border: 0;
     font-family: $headers-font;
     font-size: 18px;
     letter-spacing: 3.6px;
@@ -72,10 +72,10 @@ img {
     &::after {
         content: "";
         position: absolute;
-        z-index: -1;
         top: 50%;
         right: 0;
         left: 0;
+        z-index: -1;
         background-color: $main-color;
         height: 8px;
         transform: translateY(-50%);

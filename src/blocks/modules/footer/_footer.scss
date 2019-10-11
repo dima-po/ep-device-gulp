@@ -91,12 +91,12 @@
     }
 
     &__secondary-menu-user-info-logout {
-        border: 0;
-        padding: 0;
         margin-left: 18px;
+        padding: 0;
+        color: rgba($dark-color, 0.3);
+        border: 0;
         background-color: transparent;
         font-size: 15px;
-        color: rgba($dark-color, 0.3);
         cursor: pointer;
     }
 
@@ -117,8 +117,8 @@
         margin-right: 170px;
         font-size: 14px;
         font-style: normal;
-        color: $light-color;
         line-height: 30px;
+        color: $light-color;
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             margin-right: 167px;
@@ -154,8 +154,8 @@
 
     &__phone {
         font-size: 15px;
-        color: $light-color;
         line-height: 30px;
+        color: $light-color;
     }
 
 
