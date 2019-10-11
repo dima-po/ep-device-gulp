@@ -12,15 +12,24 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
         width: 560px;
-        min-height: 580px;
         margin-right: 40px;
+
+        p {
+            width: 475px;
+            margin-bottom: 30px;
+        }
+
+        & .device-btn {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
     }
 
     &__about-list {
         margin: 0;
-        margin-top: 35px;
+        margin-top: 5px;
+        margin-bottom: 53px;
         padding: 0;
         list-style: none;
 
@@ -52,7 +61,7 @@
 
     &__about-btn,
     &__contacts-btn {
-        margin-top: auto;
+        // margin-top: auto;
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             margin-top: 71px;
@@ -63,15 +72,21 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
+        // justify-content: space-between;
         width: 560px;
         min-height: 580px;
+
+        & .device-btn {
+            padding-left: 40px;
+            padding-right: 39px;
+        }
     }
 
     &__contacts-map {
         width: 100%;
         height: 100%;
         margin-top: 10px;
+        margin-bottom: 65px;
     }
 
 
