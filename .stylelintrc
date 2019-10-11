@@ -29,7 +29,7 @@
                     "^&:empty",
                     "#{\\$[-a-z]+}__[-a-z]+",
                     "^\\*$"
-                ],
+                ]
             },
             {
                 "severity": "warning",
@@ -66,7 +66,12 @@
             [{
                 "properties": [
                     "content",
-                    "box-sizing",
+                    "position",
+                    "top",
+                    "right",
+                    "bottom",
+                    "left",
+                    "z-index",
                     "display",
                     "flex",
                     "flex-wrap",
@@ -90,26 +95,31 @@
                     "grid-row-*",
                     "grid-template",
                     "grid-template-*",
-                    "position",
-                    "z-index",
-                    "top",
-                    "right",
-                    "bottom",
-                    "left",
                     "width",
                     "min-width",
                     "max-width",
                     "height",
                     "min-height",
                     "max-height",
-                    "overflow",
-                    "overflow-*",
                     "margin",
                     "margin-*",
-                    "border",
-                    "border-*",
                     "padding",
                     "padding-*",
+                    "font",
+                    "font-*",
+                    "line-height",
+                    "text-align",
+                    "color",
+                    "background",
+                    "background-*",
+                    "border",
+                    "border-*",
+                    "opacity",
+                    "transition",
+                    "transition-*",
+                    "box-sizing",
+                    "overflow",
+                    "overflow-*"
                 ]
             },
             {
@@ -122,8 +132,8 @@
                     "transition",
                     "transition-*",
                     "animation",
-                    "animation-*",
-                ],
+                    "animation-*"
+                ]
             }
         ]],
         "color-hex-case": ["lower", {
@@ -158,7 +168,7 @@
         }],
         "font-weight-notation": ["numeric", {
             "message": "Необходимо указывать плотность шрифта цифрой",
-            ignore: ["relative"]
+            "ignore": ["relative"]
         }],
 
         "number-no-trailing-zeros": [true, {
@@ -229,7 +239,7 @@
 
         "value-keyword-case": ["lower", {
             "message": "Значения свойств следует писать строчными буквами",
-            "ignoreProperties": ["/font-/", ]
+            "ignoreProperties": ["/font-/"]
         }],
         "value-list-comma-space-after": ["always-single-line", {
             "message": "Необходим пробел в значениях после запятой"
@@ -278,7 +288,7 @@
         "selector-max-empty-lines": [0, {
             "message": "Пустые строки в селекторах недопустимы"
         }],
-        "selector-list-comma-newline-after": ["never-multi-line", {
+        "selector-list-comma-newline-after": ["always", {
             "message": "После запятой необходим перенос строки"
         }],
         "selector-list-comma-newline-before": ["never-multi-line", {
