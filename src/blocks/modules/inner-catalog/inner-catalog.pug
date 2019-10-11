@@ -79,14 +79,14 @@ main.catalog
                 div.catalog-content__products
                     each product, index in productItems
                         article.catalog-content__products-item
-                            a.catalog-content__products-link(href="")
+                            div.catalog-content__products-link
                                 picture.catalog-content__products-image
                                     img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
                                     div.catalog-content__products-overlay
                                         button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
                                         button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
                                 div.catalog-content__products-info
-                                    h3.catalog-content__products-name= productItems[index]
+                                    a.catalog-content__products-name(href="")= productItems[index]
                                     span.catalog-content__products-price= productPrice[index]
 
                     div.catalog-content__products-pagination

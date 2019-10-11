@@ -34,6 +34,7 @@ img {
     // @include lg(max-width, rem(930));
     // @include xl(max-width, rem(1110));
     width: $basic-width;
+    padding: 0 20px;
     margin: 0 auto;
 }
 

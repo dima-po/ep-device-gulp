@@ -159,6 +159,10 @@
     &:hover::after {
         transform: translate(-50%, -50%) rotate(-45deg);
     }
+
+    iframe {
+        border: 0;
+    }
 }
 
 .popup-active {

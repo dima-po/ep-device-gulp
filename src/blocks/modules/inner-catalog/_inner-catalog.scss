@@ -389,9 +389,6 @@
     }
 
     &__products-link {
-        display: block;
-        text-decoration: none;
-        color: $dark-color;
     }
 
     &__products-link:hover &__products-overlay {
@@ -418,6 +415,8 @@
         font-family: $headers-font;
         font-size: 18px;
         line-height: 24px;
+        color: $dark-color;
+        text-decoration: none;
     }
 
     &__products-price {
