@@ -72,21 +72,41 @@ main.catalog
                         button.catalog-content__sort-arrow-down(type="button" aria-label="Сортировка по убыванию")
                             svg(xmlns='http://www.w3.org/2000/svg', width='11', height='10', viewBox='0 0 11 10')
                                 path(d='M5.5 10L0 0h11')
-
+                - var br = '<br>';
                 - var productItems = ['Любительская селфи-палка', 'Профессиональная селфи-палка', 'Непотопляемая селфи-палка', 'Селфи-палка «Следуй за мной»'];
                 - var productPrice = ['500 руб.', '1500 руб.', '2500 руб.', '4900 руб.'];
                 
                 div.catalog-content__products
                     each product, index in productItems
                         article.catalog-content__products-item
-                            div.catalog-content__products-link
-                                picture.catalog-content__products-image
-                                    img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
-                                    div.catalog-content__products-overlay
-                                        button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
-                                        button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
+                            div.catalog-content__products-wrap
+                                
+                                if (productItems[index] == 'Селфи-палка «Следуй за мной»')
+                                    picture.catalog-content__products-image.catalog-content__products-image--new
+                                        img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                                        div.catalog-content__products-overlay
+                                            button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
+                                            button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
+                                else            
+                                    picture.catalog-content__products-image
+                                        img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                                        div.catalog-content__products-overlay
+                                            button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
+                                            button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
+                                
                                 div.catalog-content__products-info
-                                    a.catalog-content__products-name(href="")= productItems[index]
+                                    if (productItems[index] == 'Профессиональная селфи-палка')
+                                        a.catalog-content__products-name(href="") Профессиональная
+                                            br
+                                            | селфи-палка
+                                    
+                                    else if (productItems[index] == 'Селфи-палка «Следуй за мной»')
+                                        a.catalog-content__products-name(href="") Селфи-палка «Следуй за
+                                            br
+                                            | мной»
+                                    
+                                    else
+                                        a.catalog-content__products-name(href="")= productItems[index]
                                     span.catalog-content__products-price= productPrice[index]
 
                     div.catalog-content__products-pagination

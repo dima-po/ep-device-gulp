@@ -3,10 +3,35 @@
     padding: 75px 140px;
     background-color: $text-color;
 
-    &-inner {
+
+    &.footer-inner {
         margin-top: 0;
         padding: 65px 140px;
     }
+
+    &.footer-inner &__secondary-menu-user-info {
+        display: block;
+        // color: $light-color;
+    }
+
+    &.footer-inner &__secondary-menu-user-info-logout {
+        // display: block;
+        color: rgba($light-color, 0.3);
+        transition: 0.2s;
+
+        &:hover {
+            color: rgba($light-color, 0.7);
+        }
+
+        &:active {
+            color: rgba($light-color, 0.2);
+        }
+    }
+
+    &.footer-inner &__secondary-menu-user-login {
+        display: none;
+    }
+    
 
     & a {
         color: $light-color;
@@ -91,7 +116,7 @@
     }
 
     &__secondary-menu-user-info-logout {
-        margin-left: 18px;
+        margin-left: 13px;
         padding: 0;
         color: rgba($dark-color, 0.3);
         border: 0;

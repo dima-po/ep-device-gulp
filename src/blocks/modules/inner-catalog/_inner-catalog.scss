@@ -152,6 +152,11 @@
             display: none;
         }
 
+        input[type="checkbox"]:disabled + label,
+        input[type="radio"]:disabled + label {
+            opacity: 0.4;
+        }
+
         input:checked ~ label::after {
             display: block;
         }
@@ -380,7 +385,7 @@
 
     &__products-item {
         width: calc(50% - 20px);
-        margin-bottom: 70px;
+        margin-bottom: 48px;
         
 
         &:nth-child(2n + 1) {
@@ -388,10 +393,7 @@
         }
     }
 
-    &__products-link {
-    }
-
-    &__products-link:hover &__products-overlay {
+    &__products-wrap:hover &__products-overlay {
         // transform: translateY(0);
         transform: scale(1);
     }
@@ -405,7 +407,6 @@
     &__products-info {
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
         margin-top: 30px;
     }
