@@ -14,13 +14,20 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 9999;
     display: none;
     width: 100%;
-    z-index: 9999;
     max-width: 960px;
     padding: 100px;
     background-color: $light-color;
     transform: translate(-50%, -50%);
+
+    &--active {
+        display: block;
+        transform: translate(-50%, -50%);
+        animation-name: popup-dropdown;
+        animation-duration: 0.5s;
+    }
 
     &--fill-error {
         animation-name: bounce;
@@ -54,10 +61,10 @@
 
         input,
         textarea {
-            border: 0;
             padding: 15px;
-            font-size: 14px;
             color: $text-color;
+            border: 0;
+            font-size: 14px;
             background-color: rgba($text-color, 0.09);
 
             &:focus {
