@@ -88,7 +88,7 @@
     &__filter-item-range-active {
         position: absolute;
         top: 0;
-        left: 40px;
+        left: 0;
         width: 60%;
         height: 2px;
         background-color: #91c92f;
@@ -97,7 +97,7 @@
     &__filter-item-range-min {
         position: absolute;
         top: -9px;
-        left: 32px;
+        left: -5px;
         width: 20px;
         height: 20px;
         background-color: #ababab;
@@ -110,7 +110,7 @@
     &__filter-item-range-max {
         position: absolute;
         top: -9px;
-        // right: 32px;
+        right: 72px;
         width: 20px;
         height: 20px;
         background-color: #ababab;
@@ -129,6 +129,10 @@
 
     &__filter-item-range-value {
         width: 50px;
+
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
     }
 
     &__filter-item-range-label,

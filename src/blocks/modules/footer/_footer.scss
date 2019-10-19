@@ -1,12 +1,12 @@
 .footer {
     margin-top: 65px;
-    padding: 75px 140px;
+    padding: 75px 0;
     background-color: $text-color;
 
 
     &.footer-inner {
         margin-top: 0;
-        padding: 65px 140px;
+        padding: 65px 0;
     }
 
     &.footer-inner &__secondary-menu-user-info {
