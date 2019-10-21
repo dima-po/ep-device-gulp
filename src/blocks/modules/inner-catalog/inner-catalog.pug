@@ -79,17 +79,18 @@ main.catalog
                 div.catalog-content__products
                     each product, index in productItems
                         article.catalog-content__products-item
+                            h4.visually-hidden Карточка товара
                             div.catalog-content__products-wrap
                                 
                                 if (productItems[index] == 'Селфи-палка «Следуй за мной»')
-                                    picture.catalog-content__products-image.catalog-content__products-image--new
-                                        img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                                    div.catalog-content__products-image.catalog-content__products-image--new(data-label="new")
+                                        img(src="img/product-item-" + (index + 1) + ".jpg" width="358" height="378" alt="Изображение товара")
                                         div.catalog-content__products-overlay
                                             button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
                                             button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению
                                 else            
-                                    picture.catalog-content__products-image
-                                        img(src="img/product-item-" + (index + 1) + ".jpg"  alt="Изображение товара")
+                                    div.catalog-content__products-image
+                                        img(src="img/product-item-" + (index + 1) + ".jpg" width="358" height="378" alt="Изображение товара")
                                         div.catalog-content__products-overlay
                                             button.catalog-content__products-overlay-cart.device-btn(type="button") В корзину
                                             button.catalog-content__products-overlay-compare(type="button") Добавить к сравнению

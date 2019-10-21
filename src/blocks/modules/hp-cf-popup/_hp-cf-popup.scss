@@ -22,18 +22,6 @@
     background-color: $light-color;
     transform: translate(-50%, -50%);
 
-    &--active {
-        display: block;
-        transform: translate(-50%, -50%);
-        animation-name: popup-dropdown;
-        animation-duration: 0.5s;
-    }
-
-    &--fill-error {
-        animation-name: bounce;
-        animation-duration: 0.5s;
-    }
-
     &__wrap {
 
         form {
@@ -114,6 +102,10 @@
         width: 100%;
         height: 100%;
     }
+
+    iframe {
+        border: 0;
+    }
 }
 
 
@@ -172,9 +164,15 @@
     }
 }
 
+
 .popup-active {
     display: block;
     transform: translate(-50%, -50%);
     animation-name: popup-dropdown;
+    animation-duration: 0.5s;
+}
+
+.popup-fill-error {
+    animation-name: popup-dropdown, bounce;
     animation-duration: 0.5s;
 }
