@@ -1,13 +1,13 @@
 .conditions {
     position: relative;
-    margin-top: 160px;
-    background-color: #e5e5e5;
+    min-height: 385px;
+    margin-top: 61px;
+    background-image: linear-gradient(to bottom, #fff 0, #fff 25%, #e5e5e5 25%, #e5e5e5 100%);
 
     $this: ".conditions";
 
     &__wrap {
         position: relative;
-        top: -100px;
         display: flex;
         flex-direction: row;
         align-items: center;

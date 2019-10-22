@@ -62,7 +62,7 @@
     &__filter-item {
         width: 100%;
         margin: 0;
-        margin-bottom: 32px;
+        margin-bottom: 31px;
         padding: 0;
         border: 0;
 
@@ -512,7 +512,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin-top: -10px;
+        margin-top: -12px;
         margin-bottom: 77px;
         font-family: $headers-font;
         background-color: $catalog-grey-color;
@@ -552,7 +552,7 @@
         list-style: none;
 
         li:not(:last-child) {
-            margin-right: 30px;
+            margin-right: 31px;
         }
     }
 
