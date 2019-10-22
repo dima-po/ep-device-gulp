@@ -147,9 +147,6 @@
 
 
 
-
-
-
     &__filter-item-group {
 
         input[type="checkbox"],
@@ -166,6 +163,10 @@
             display: block;
         }
 
+        input:checked ~ label::before {
+            display: none;
+        }
+
         label {
             position: relative;
             padding-left: 38px;
@@ -173,82 +174,135 @@
             font-size: 14px;
             line-height: 40px;
             transition: 0.2s;
+            user-select: none;
 
-            &:hover {
+            &:hover::before,
+            &:hover::after {
                 opacity: 0.6;
             }
     
-            &:active {
+            &:active::before,
+            &:active::after {
                 opacity: 1;
             }
         }
     }
 
     &__filter-label-checkbox {
-        
+        position: relative;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 0;
+        //     width: 23px;
+        //     height: 23px;
+        //     margin-right: 13px;
+        //     border: 2px solid $dark-color;
+        //     border-radius: 3px;
+        //     transform: translateY(-50%);
+        // }
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: -6px;
+        //     left: 10px;
+        //     display: none;
+        //     width: 11px;
+        //     height: 23px;
+        //     border-bottom: 4px solid $dark-color;
+        //     border-right: 4px solid $dark-color;
+        //     box-shadow: 3px 0 0 0 $catalog-grey-color;
+        //     transform: rotate(45deg);
+        // }
 
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
             width: 23px;
             height: 23px;
-            margin-right: 13px;
-            border: 2px solid $dark-color;
-            border-radius: 3px;
-            transform: translateY(-50%);
+            vertical-align: middle;
+            background: url("../img/checkbox-off.svg") no-repeat left center;
+            background-size: contain;
         }
 
         &::after {
             content: "";
             position: absolute;
-            top: -6px;
-            left: 10px;
+            top: 0;
+            left: 0;
             display: none;
-            width: 11px;
+            width: 27px;
             height: 23px;
-            border-bottom: 4px solid $dark-color;
-            border-right: 4px solid $dark-color;
-            box-shadow: 3px 0 0 0 $catalog-grey-color;
-            transform: rotate(45deg);
+            background: url("../img/checkbox-on.svg") no-repeat left center;
+            background-size: contain;
         }
     }
 
     &__filter-label-radio {
+        position: relative;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 0;
+        //     width: 25px;
+        //     height: 25px;
+        //     margin-right: 13px;
+        //     border: 4px solid $dark-color;
+        //     border-radius: 50%;
+        //     transform: translateY(-50%);
+        // }
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 8px;
+        //     display: none;
+        //     width: 9px;
+        //     height: 9px;
+        //     background-color: $dark-color;
+        //     border-radius: 50%;
+        //     transform: translateY(-50%);
+        // }
 
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
-            width: 25px;
-            height: 25px;
-            margin-right: 13px;
-            border: 4px solid $dark-color;
-            border-radius: 50%;
-            transform: translateY(-50%);
+            width: 23px;
+            height: 23px;
+            vertical-align: middle;
+            background: url("../img/radio-off.svg") no-repeat left center;
+            background-size: contain;
         }
 
         &::after {
             content: "";
             position: absolute;
-            top: 50%;
-            left: 8px;
+            top: 0;
+            left: 0;
             display: none;
-            width: 9px;
-            height: 9px;
-            background-color: $dark-color;
-            border-radius: 50%;
-            transform: translateY(-50%);
+            width: 27px;
+            height: 23px;
+            background: url("../img/radio-on.svg") no-repeat left center;
+            background-size: contain;
         }
+
     }
     
     &__filter-item-title {
         position: relative;
         width: 100%;
         margin-bottom: 19px;
-        padding-top: 11px;
+        padding-top: 12px;
         font-family: $headers-font;
         font-size: 18px;
         line-height: 24px;

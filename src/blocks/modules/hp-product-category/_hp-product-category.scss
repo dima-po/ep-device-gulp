@@ -25,6 +25,15 @@
         justify-content: center;
         color: $dark-color;
         text-decoration: none;
+
+        &:hover .products-category__list-image {
+            background-color: $main-color;
+        }
+
+        &:active .products-category__list-title,
+        &:active img {
+            opacity: 0.3;
+        }
     }
 
     &__list-image {
@@ -37,19 +46,6 @@
         margin-bottom: 34px;
         background-color: rgba($main-color, 0.5);
         transition: background-color 0.2s;
-
-        
-        &:hover {
-            background-color: $main-color;
-        }
-
-        &:active {
-            transition: opacity 0.2s;
-            
-            img {
-                opacity: 0.3;
-            }
-        }
 
         img {
             position: absolute;

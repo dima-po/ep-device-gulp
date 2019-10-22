@@ -3,6 +3,9 @@
     padding: 75px 0;
     background-color: $text-color;
 
+    a {
+        text-decoration: none;
+    }
 
     &.footer-inner {
         margin-top: 0;
@@ -33,19 +36,19 @@
     }
     
 
-    & a {
-        color: $light-color;
-        text-decoration: none;
-        transition: 0.2s;
+    // & a {
+    //     color: $light-color;
+    //     text-decoration: none;
+    //     transition: 0.2s;
 
-        &:hover {
-            opacity: 0.6;
-        }
+    //     &:hover {
+    //         opacity: 0.6;
+    //     }
     
-        &:active {
-            opacity: 0.3;
-        }
-    }
+    //     &:active {
+    //         opacity: 0.3;
+    //     }
+    // }
 
     &__top {
         display: flex;
@@ -55,17 +58,17 @@
     }
 
     &__logo {
+        transition: 0.2s;
 
         svg {
             fill: $main-color;
-            transition: 0.2s;
         }
 
-        &:hover svg {
+        &:hover {
             opacity: 0.6;
         }
 
-        &:active svg {
+        &:active {
             opacity: 0.3;
         }
     }
@@ -84,11 +87,24 @@
             fill: $main-color;
         }
 
-        li,
         a {
             font-size: 15px;
             line-height: 36px;
-            color: rgba($light-color, 0.6);
+            color: rgba($light-color, 0.7);
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+                color: $light-color;
+
+                svg {
+                    opacity: 0.6;
+                }
+            }
+
+            &:focus {
+                opacity: 0.3;
+            }
         }
 
         span {
@@ -175,12 +191,32 @@
         &:not(:last-child) {
             margin-right: 33px;
         }
+
+        a {
+            color: $light-color;
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
     }
 
     &__phone {
         font-size: 15px;
         line-height: 30px;
         color: $light-color;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
     }
 
 
@@ -224,7 +260,7 @@
         }
 
         &:active svg {
-            opacity: 0.3;
+            opacity: 0.1;
         }
     }
 
