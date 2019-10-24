@@ -493,6 +493,8 @@
     }
 
     &__products-name {
+        width: 260px;
+        // padding-right: 15px;
         font-family: $headers-font;
         font-size: 18px;
         line-height: 24px;
@@ -501,9 +503,12 @@
     }
 
     &__products-price {
+        margin-top: 1px;
+        margin-right: -3px;
         font-family: $headers-light-font;
         font-size: 16px;
         line-height: 24px;
+        letter-spacing: 0.7px;
     }
 
     &__products-pagination {
@@ -589,6 +594,10 @@
         // transform: translateY(-100%);
         transform: scale(0);
         transition: 0.3s;
+
+        &:focus-within {
+            transform: scale(1);
+        }
 
         &::before {
             content: "";
