@@ -3,6 +3,10 @@
     padding: 65px 0;
     background-color: $text-color;
 
+    @media screen and (max-width: 1200px) {
+        width: 1200px;
+    }
+
     a {
         text-decoration: none;
     }

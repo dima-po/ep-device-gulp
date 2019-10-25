@@ -27,6 +27,13 @@ img {
 //     height: auto;
 // }
 
+main {
+
+    @media screen and (max-width: 1200px) {
+        width: 1200px;
+    }
+}
+
 .container {
     // @include container();
     // @include sm(max-width, rem(510));
@@ -34,6 +41,7 @@ img {
     // @include lg(max-width, rem(930));
     // @include xl(max-width, rem(1110));
     width: $basic-width;
+    // min-width: $basic-width;
     margin: 0 auto;
     padding: 0 20px;
 }
