@@ -168,11 +168,15 @@
             &-logout {
                 margin-left: 13px;
                 padding: 0;
-                color: rgba($dark-color, 0.3);
                 border: 0;
+                color: rgba($dark-color, 0.3);
                 font-size: 15px;
                 background-color: transparent;
                 cursor: pointer;
+
+                &:hover {
+                    color: rgba($dark-color, 0.6); 
+                }
             }
         }
     }
