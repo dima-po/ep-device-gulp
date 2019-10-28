@@ -15,29 +15,6 @@
         margin-top: 0;
         padding: 65px 0;
     }
-
-    &.footer-inner &__secondary-menu-user-info {
-        display: block;
-        // color: $light-color;
-    }
-
-    &.footer-inner &__secondary-menu-user-info-logout {
-        // display: block;
-        color: rgba($light-color, 0.3);
-        transition: 0.2s;
-
-        &:hover {
-            color: rgba($light-color, 0.7);
-        }
-
-        &:active {
-            color: rgba($light-color, 0.2);
-        }
-    }
-
-    &.footer-inner &__secondary-menu-user-login {
-        display: none;
-    }
     
 
     // & a {
@@ -86,56 +63,57 @@
         margin-top: -12px;
         padding: 0;
         list-style: none;
+    }
+
+
+    &__secondary-menu-item {
+        margin-left: 33px;
 
         svg {
             position: absolute;
             fill: $main-color;
         }
 
-        li {
-            margin-left: 33px;
-        }
-
-        li:nth-child(1) svg {
+        &:nth-child(1) svg {
             top: 5px;
             left: 2px;
         }
 
-        li:nth-child(2) svg {
+        &:nth-child(2) svg {
             top: 7px;
             left: 9px;
         }
         
-        li:nth-child(3) svg {
+        &:nth-child(3) svg {
             top: 5px;
             left: 8px;
         }
+    }
 
-        a {
-            position: relative;
-            font-size: 15px;
-            line-height: 36px;
-            color: rgba($light-color, 0.7);
-            text-decoration: none;
-            transition: 0.2s;
+    &__secondary-menu-link {
+        position: relative;
+        font-size: 15px;
+        line-height: 36px;
+        color: rgba($light-color, 0.7);
+        text-decoration: none;
+        transition: 0.2s;
 
-            &:hover {
-                color: $light-color;
+        &:hover {
+            color: $light-color;
 
-                svg {
-                    opacity: 0.6;
-                }
+            svg {
+                opacity: 0.6;
             }
+        }
 
-            &:focus {
-                opacity: 0.3;
-            }
+        &:focus {
+            opacity: 0.3;
         }
 
         span {
-            // margin-left: 14px;
             padding-left: 28px;
         }
+
     }
 
     &__secondary-menu-login {
@@ -162,9 +140,6 @@
         font-size: 15px;
         cursor: pointer;
     }
-
-
-
 
 
     &__middle {
@@ -304,4 +279,27 @@
             opacity: 0.3;
         }
     }
+}
+
+
+.footer-inner .footer__secondary-menu-user-info {
+    display: block;
+}
+
+.footer-inner .footer__secondary-menu-user-info-logout {
+    // display: block;
+    color: rgba($light-color, 0.3);
+    transition: 0.2s;
+
+    &:hover {
+        color: rgba($light-color, 0.7);
+    }
+
+    &:active {
+        color: rgba($light-color, 0.2);
+    }
+}
+
+.footer-inner .footer__secondary-menu-user-login {
+    display: none;
 }

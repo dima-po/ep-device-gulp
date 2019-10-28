@@ -87,6 +87,10 @@
         height: 100%;
         margin-top: 8px;
         margin-bottom: 65px;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            margin-bottom: -30px;
+        }
     }
 
 

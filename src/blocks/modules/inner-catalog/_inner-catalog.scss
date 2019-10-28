@@ -363,16 +363,14 @@
 
     &__sort-nav-item {
 
-        button {
-            margin: 0;
-            padding: 0;
+        a {
             font-size: 14px;
             line-height: 18px;
             color: rgba($dark-color, 0.3);
             background-color: transparent;
             border: 0;
             transition: 0.2s;
-            cursor: pointer;
+            text-decoration: none;
 
             &:hover {
                 color: rgba($dark-color, 0.6);
@@ -389,36 +387,84 @@
 
         &--active {
             
-            button {
+            a {
                 color: $dark-color;
             }
         }
     }
 
     &__sort-arrow {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
         margin-left: auto;
+        padding: 0;
+        list-style: none;
 
-        button {
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            border: 0;
-            opacity: 0.2;
-            transition: 0.2s;
-            cursor: pointer;
-
-            &:last-child {
-                margin-left: 14px;
-            }
-
-            &:hover {
-                opacity: 0.4;
-            }
-    
-            &:active {
-                opacity: 1;
-            }
+        li:not(:last-child) {
+            margin-right: 15px;
         }
+
+        &-up,
+        &-down {
+            display: block;
+            text-decoration: none;
+        }
+
+        &-up::after,
+        &-down::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 2px;
+            border: 12px solid #000;
+            border-right-width: 6px;
+            border-left-width: 6px;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            opacity: 0.2;
+        }
+
+        &-up::after {
+            border-top-width: 0;
+        }
+
+        &-down::after {
+            border-bottom-width: 0;
+        }
+
+        &-up:hover::after,
+        &-down:hover::after {
+            opacity: 0.4;
+        }
+
+        &-up:active::after,
+        &-down:active::after {
+            opacity: 1;
+        }
+
+
+        // button {
+        //     margin: 0;
+        //     padding: 0;
+        //     background-color: transparent;
+        //     border: 0;
+        //     opacity: 0.2;
+        //     transition: 0.2s;
+        //     cursor: pointer;
+
+        //     &:last-child {
+        //         margin-left: 14px;
+        //     }
+
+        //     &:hover {
+        //         opacity: 0.4;
+        //     }
+    
+        //     &:active {
+        //         opacity: 1;
+        //     }
+        // }
     }
 
 
